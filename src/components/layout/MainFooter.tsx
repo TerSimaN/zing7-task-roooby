@@ -60,8 +60,6 @@ const MainFooter = () => {
                         <Image
                             src={rooobyLogo}
                             alt="Roooby Logo"
-                            width={95}
-                            height={28}
                         />
                     </a>
                     <p className="font-inter font-normal text-[404040] text-sm leading-6 mt-6 w-[16.5rem]">

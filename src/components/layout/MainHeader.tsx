@@ -17,8 +17,6 @@ const mainHeader = () => {
                     <Image
                         src={rooobyLogo}
                         alt="Roooby Logo"
-                        width={95}
-                        height={28}
                     />
                 </a>
                 <ul className="flex gap-12 font-inter font-medium text-sm">

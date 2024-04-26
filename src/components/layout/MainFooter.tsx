@@ -1,7 +1,137 @@
+import Image from "next/image"
+import { facebookLogo, keyboardArrowDownIcon, languageIcon, linkedinLogo, rooobyLogo, twitterLogo } from "../../../public/assets/icons"
+
+const links = [
+    { name: 'Terms of Service', href: '#' },
+    { name: 'Privacy Policy', href: '#' },
+    { name: 'Cookies', href: '#' }
+]
+
+const sections = [
+    {
+        name: 'Company',
+        links: [
+            { name: 'About', href: '#' },
+            { name: 'Pricing', href: '#' },
+            { name: 'Jobs', href: '#' },
+            { name: 'Blog', href: '#' },
+            { name: 'Careers', href: '#' }
+        ]
+    },
+    {
+        name: 'Product',
+        links: [
+            { name: 'Sales software', href: '#' },
+            { name: 'Features', href: '#' },
+            { name: 'Privacy', href: '#' },
+            { name: 'Marketplace', href: '#' },
+            { name: 'Status', href: '#' },
+            { name: 'API', href: '#' }
+        ]
+    },
+    {
+        name: 'Discover',
+        links: [
+            { name: 'Partner Program', href: '#' },
+            { name: 'Get our newsletter', href: '#' },
+            { name: 'Sales Pipeline', href: '#' },
+            { name: 'What is CRM?', href: '#' },
+            { name: 'CRM Comparison', href: '#' },
+            { name: 'Resources', href: '#' }
+        ]
+    },
+    {
+        name: 'Help Center',
+        links: [
+            { name: 'Community', href: '#' },
+            { name: 'Knowledge Base', href: '#' },
+            { name: 'Academy', href: '#' },
+            { name: 'Support', href: '#' }
+        ]
+    }
+]
+
 const MainFooter = () => {
-  return (
-    <div>MainFooter</div>
-  )
+    return (
+        <footer className="col-span-12">
+            <div className="flex flex-row justify-between">
+                <div className="flex flex-col">
+                    <a href="/">
+                        <Image
+                            src={rooobyLogo}
+                            alt="Roooby Logo"
+                            width={95}
+                            height={28}
+                        />
+                    </a>
+                    <p className="font-inter font-normal text-[404040] text-sm leading-6 mt-6 w-[16.5rem]">
+                        We built an elegant solution.
+                        <br />
+                        Our team created a fully integrated sales and marketing solution for SMBs
+                    </p>
+                    <div className="flex flex-row gap-4 mt-6 w-[6.5rem] h-6">
+                        <Image
+                            src={twitterLogo}
+                            alt="Twitter"
+                            width={24}
+                            height={24}
+                        />
+                        <Image
+                            src={facebookLogo}
+                            alt="Facebook"
+                            width={24}
+                            height={24}
+                        />
+                        <Image
+                            src={linkedinLogo}
+                            alt="LinkedIn"
+                            width={24}
+                            height={24}
+                        />
+                    </div>
+                </div>
+                <div className="flex flex-row items-start justify-between w-full max-w-[768px]">
+                    {sections.map((section) => (
+                        <div key={section.name} className="flex flex-col gap-y-3">
+                            <h2 className="font-inter font-bold text-base">{section.name}</h2>
+                            <ul className="font-intet font-normal text-sm leading-9 tracking-[0.2px]">
+                                {section.links.map((link) => (
+                                    <li key={link.name}>
+                                        <a href={link.href}>{link.name}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="flex flex-row items-center justify-between mt-[6.25rem] mb-10">
+                <span className="font-inter font-normal text-[#404040] text-sm tracking-[0.2px]">© Copyright 2024</span>
+                <ul className="flex flex-row items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
+                    {links.map((link) => (
+                        <li key={link.name}>
+                            <a href={link.href}>{link.name}</a>
+                        </li>
+                    ))}
+                </ul>
+                <div className="flex flex-row items-center">
+                    <Image
+                        src={languageIcon}
+                        alt="Language Icon"
+                        width={24}
+                        height={24}
+                    />
+                    <span className="font-inter font-medium text-sm tracking-[0.2px] ml-2 -mr-1">English</span>
+                    <Image
+                        src={keyboardArrowDownIcon}
+                        alt="Arrow down Icon"
+                        width={16}
+                        height={16}
+                    />
+                </div>
+            </div>
+        </footer>
+    )
 }
 
 export default MainFooter

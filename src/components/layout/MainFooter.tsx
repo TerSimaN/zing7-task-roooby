@@ -105,7 +105,8 @@ const MainFooter = () => {
                     ))}
                 </div>
             </div>
-            <div className="flex flex-row items-center justify-between mt-[6.25rem] mb-10">
+            <div className="border-t border-[#787878] opacity-25 mt-[6.25rem] w-full h-[1px]"></div>
+            <div className="flex flex-row items-center justify-between mt-10 mb-10">
                 <span className="font-inter font-normal text-[#404040] text-sm tracking-[0.2px]">© Copyright 2024</span>
                 <ul className="flex flex-row items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
                     {links.map((link) => (

@@ -23,7 +23,7 @@ const mainHeader = () => {
                 </a>
                 <ul className="flex gap-12 font-inter font-medium text-sm">
                     {links.map((link) => (
-                        <li>
+                        <li key={link.name}>
                             <a href={link.href}>{link.name}</a>
                         </li>
                     ))}

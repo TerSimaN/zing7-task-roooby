@@ -63,7 +63,7 @@ const MainFooter = () => {
                             alt="Roooby Logo"
                         />
                     </Link>
-                    <p className="font-inter font-normal text-[404040] text-sm leading-6 mt-6 w-[16.5rem]">
+                    <p className="font-inter font-normal text-roooby-gray-500 text-sm leading-6 mt-6 w-[16.5rem]">
                         We built an elegant solution.
                         <br />
                         Our team created a fully integrated sales and marketing solution for SMBs
@@ -104,9 +104,9 @@ const MainFooter = () => {
                     ))}
                 </div>
             </div>
-            <div className="border-t border-[#787878] opacity-25 mt-[6.25rem] w-full h-[1px]"></div>
+            <div className="border-t border-roooby-gray-300 opacity-25 mt-[6.25rem] w-full h-[1px]"></div>
             <div className="flex flex-row items-center justify-between mt-10 mb-10">
-                <span className="font-inter font-normal text-[#404040] text-sm tracking-[0.2px]">© Copyright 2024</span>
+                <span className="font-inter font-normal text-roooby-gray-500 text-sm tracking-[0.2px]">© Copyright 2024</span>
                 <ul className="flex flex-row items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
                     {links.map((link, i) => (
                         <li key={i}>

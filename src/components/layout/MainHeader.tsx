@@ -28,10 +28,10 @@ const MainHeader = () => {
                     ))}
                 </ul>
                 <div className="flex flex-row items-center gap-5 ml-auto">
-                    <button className="font-inter font-bold text-xs tracking-[-0.19px] bg-white border rounded border-[#DCDCDC] w-[4.75rem] h-8">
+                    <button className="font-inter font-bold text-xs tracking-[-0.19px] bg-white border rounded border-roooby-gray-200 w-[4.75rem] h-8">
                         Log In
                     </button>
-                    <button className="font-inter font-bold text-white text-xs tracking-[-0.19px] bg-[#150050] rounded w-28 h-8">
+                    <button className="font-inter font-bold text-white text-xs tracking-[-0.19px] bg-roooby-blue rounded w-28 h-8">
                         Try For Free
                     </button>
                 </div>

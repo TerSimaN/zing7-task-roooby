@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { facebookLogo, keyboardArrowDownIcon, languageIcon, linkedinLogo, rooobyLogo, twitterLogo } from "../../../public/assets/icons"
+import { keyboardArrowDownIcon, languageIcon } from "../../../public/assets/icons"
+import { facebookLogo, linkedinLogo, rooobyLogo, twitterLogo } from "../../../public/assets/logos";
 import Link from "next/link"
 
 const links = [

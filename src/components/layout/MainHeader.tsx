@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { rooobyLogo } from "../../../public/assets/icons"
+import { rooobyLogo } from "../../../public/assets/logos"
 import Link from "next/link"
 
 const links = [

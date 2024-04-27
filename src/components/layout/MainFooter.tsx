@@ -108,9 +108,9 @@ const MainFooter = () => {
             <div className="flex flex-row items-center justify-between mt-10 mb-10">
                 <span className="font-inter font-normal text-[#404040] text-sm tracking-[0.2px]">© Copyright 2024</span>
                 <ul className="flex flex-row items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
-                    {links.map((link) => (
-                        <li key={link.name}>
-                            <a href={link.href}>{link.name}</a>
+                    {links.map((link, i) => (
+                        <li key={i}>
+                            <Link href={link.href}>{link.name}</Link>
                         </li>
                     ))}
                 </ul>

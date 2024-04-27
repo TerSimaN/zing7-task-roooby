@@ -1,28 +1,29 @@
 import Image from "next/image"
 import { rooobyLogo } from "../../../public/assets/icons"
+import Link from "next/link"
 
 const links = [
     { name: 'Product', href: '#' },
-    { name: 'Pricing', href: '#' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Company', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
 ]
 
-const mainHeader = () => {
+const MainHeader = () => {
     return (
         <header className="col-span-12 py-6">
             <div className="flex flex-row items-center">
-                <a href="/" className="mr-[6.25rem]">
+                <Link href={'/'} className="mr-[6.25rem]">
                     <Image
                         src={rooobyLogo}
                         alt="Roooby Logo"
                     />
-                </a>
+                </Link>
                 <ul className="flex gap-12 font-inter font-medium text-sm">
-                    {links.map((link) => (
-                        <li key={link.name}>
-                            <a href={link.href}>{link.name}</a>
+                    {links.map((link, i) => (
+                        <li key={link.href + i}>
+                            <Link href={link.href}>{link.name}</Link>
                         </li>
                     ))}
                 </ul>
@@ -39,4 +40,4 @@ const mainHeader = () => {
     )
 }
 
-export default mainHeader
+export default MainHeader

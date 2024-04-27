@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { facebookLogo, keyboardArrowDownIcon, languageIcon, linkedinLogo, rooobyLogo, twitterLogo } from "../../../public/assets/icons"
+import Link from "next/link"
 
 const links = [
     { name: 'Terms of Service', href: '#' },
@@ -56,12 +57,12 @@ const MainFooter = () => {
         <footer className="col-span-12">
             <div className="flex flex-row justify-between">
                 <div className="flex flex-col">
-                    <a href="/">
+                    <Link href={'/'}>
                         <Image
                             src={rooobyLogo}
                             alt="Roooby Logo"
                         />
-                    </a>
+                    </Link>
                     <p className="font-inter font-normal text-[404040] text-sm leading-6 mt-6 w-[16.5rem]">
                         We built an elegant solution.
                         <br />
@@ -93,9 +94,9 @@ const MainFooter = () => {
                         <div key={section.name} className="flex flex-col gap-y-3">
                             <h2 className="font-inter font-bold text-base">{section.name}</h2>
                             <ul className="font-intet font-normal text-sm leading-9 tracking-[0.2px]">
-                                {section.links.map((link) => (
-                                    <li key={link.name}>
-                                        <a href={link.href}>{link.name}</a>
+                                {section.links.map((link, i) => (
+                                    <li key={i}>
+                                        <Link href={link.href}>{link.name}</Link>
                                     </li>
                                 ))}
                             </ul>

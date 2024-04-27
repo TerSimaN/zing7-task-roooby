@@ -10,6 +10,23 @@ const config: Config = {
     extend: {
       fontFamily: {
         inter: ['var(--inter)']
+      },
+      colors: {
+        'roooby-gray': {
+          100: '#f4f4f4',
+          200: '#dcdcdc',
+          300: '#787878',
+          400: '#777777',
+          500: '#404040',
+          600: '#3b3a40'
+        },
+        'roooby-green': {
+          100: '#ebfbf3',
+          400: '#00cc61'
+        },
+        'roooby-blue': '#150050',
+        'roooby-teal': '#004050',
+        'roooby-yellow': '#ffe377'
       }
     },
   },

@@ -7,6 +7,7 @@ import keyboardArrowDownIcon from './ic_keyboard_arrow_down.svg';
 import keyboardArrowRightBlackIcon from './ic_keyboard_arrow_right_black.svg';
 import keyboardArrowRightDarkBlueIcon from './ic_keyboard_arrow_right_dark_blue.svg';
 import keyboardArrowRightGreenIcon from './ic_keyboard_arrow_right_green.svg';
+import checkmarkIcon from './ic_done.svg';
 
 export {
     headIcon,
@@ -17,5 +18,6 @@ export {
     keyboardArrowDownIcon,
     keyboardArrowRightBlackIcon,
     keyboardArrowRightDarkBlueIcon,
-    keyboardArrowRightGreenIcon
+    keyboardArrowRightGreenIcon,
+    checkmarkIcon
 }

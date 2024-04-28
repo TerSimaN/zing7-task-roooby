@@ -55,7 +55,7 @@ const sections = [
 
 const MainFooter = () => {
     return (
-        <footer className="col-span-12">
+        <footer className="col-span-12 mt-[9.25rem] mx-[9.25rem]">
             <div className="flex flex-row justify-between">
                 <div className="flex flex-col">
                     <Link href={'/'}>

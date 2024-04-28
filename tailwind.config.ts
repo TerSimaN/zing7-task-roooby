@@ -27,6 +27,9 @@ const config: Config = {
         'roooby-blue': '#150050',
         'roooby-teal': '#004050',
         'roooby-yellow': '#ffe377'
+      },
+      backgroundImage: {
+        'cta-shape': "url('/assets/images/cta-shape-image.png')"
       }
     },
   },

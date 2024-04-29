@@ -29,10 +29,18 @@ const config: Config = {
         'roooby-yellow': '#ffe377'
       },
       backgroundImage: {
-        'cta-shape': "url('/assets/images/cta-shape-image.png')",
         'cta-background': "url('/assets/images/cta-bg-image.svg')"
       }
     },
+    container: {
+      padding: {
+        xl: '0rem'
+      },
+      center: true,
+      screens: {
+        sm: '1140px'
+      }
+    }
   },
   plugins: [],
 };

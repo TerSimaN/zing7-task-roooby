@@ -1,19 +1,12 @@
 import Image from "next/image";
 import { deliverImage, employeeImage, fosterOval, gibbsOval, headerImage, marketingImage, phelpsOval, rossOval, salesImage, serviceImage, wilkinsOval } from "../../public/assets/images";
-import { amazonLogo, asanaLogo, atlassianLogo, cannonLogo, chartsLogo, gearLogo, googleLogo, googleMeetLogo, hubSpotLogo, intercomLogo, microsoftTeamsLogo, slackLogo, walmartLogo, zendeskLogo, zoomLogo } from "../../public/assets/logos";
+import { asanaLogo, chartsLogo, gearLogo, googleMeetLogo, hubSpotLogo, intercomLogo, microsoftTeamsLogo, slackLogo, zendeskLogo, zoomLogo } from "../../public/assets/logos";
 import { headIcon, keyboardArrowRightDarkBlueIcon, keyboardArrowRightGreenIcon, laptopIcon, magicIcon, quotationMarkIcon } from "../../public/assets/icons";
 import Cta from "@/components/layout/Cta";
 import Article from "@/components/layout/Article";
 import Author from "@/components/ui/Author";
 import CheckmarkItem from "@/components/ui/CheckmarkItem";
-
-const logos = [
-  { imgSrc: googleLogo, imgAlt: 'Google logo' },
-  { imgSrc: atlassianLogo, imgAlt: 'Atlassian logo' },
-  { imgSrc: cannonLogo, imgAlt: 'Cannon logo' },
-  { imgSrc: walmartLogo, imgAlt: 'Walmart logo' },
-  { imgSrc: amazonLogo, imgAlt: 'Amazon logo' },
-]
+import Clients from "@/components/layout/Clients";
 
 const extensions = [
   { imgSrc: gearLogo, imgAlt: 'gear logo' },
@@ -52,7 +45,7 @@ const cards = [
 export default function Home() {
   return (
     <main className="col-span-12 relative">
-      <div className="flex flex-col bg-roooby-gray-100 pt-[4.5rem] pb-[5.25rem] px-[9.25rem]">
+      <div className="flex flex-col bg-roooby-gray-100 pt-[4.5rem] px-[9.25rem]">
         <h1 className="font-inter font-bold text-roooby-blue text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40rem]">Bringing companies and customers together, anywhere</h1>
         <p className="font-inter font-normal text-lg leading-7 max-w-[29.75rem] mt-6">
           An awesome & powefull tools for your business,
@@ -68,16 +61,7 @@ export default function Home() {
           </form>
           <span className="font-inter font-normal text-roooby-gray-500 text-sm pl-4">Full access. No credit card required.</span>
         </div>
-        <div className="flex flex-row items-center justify-between mt-32">
-          <span className="font-inter font-medium text-base tracking-[-0.22px]">Trusted by 1,000+ customers</span>
-          {logos.map((logo, i) => (
-            <Image
-              src={logo.imgSrc}
-              alt={logo.imgAlt}
-              key={i}
-            />
-          ))}
-        </div>
+        <Clients />
       </div>
       <Image
         src={headerImage}

@@ -1,4 +1,3 @@
-import ctaShapeImage from './cta-shape-image.png'
 import deliverImage from './deliver-image.svg';
 import employeeImage from './employee-image.svg';
 import fosterOval from './foster-oval.svg';
@@ -12,7 +11,6 @@ import serviceImage from './service-image.svg';
 import wilkinsOval from './wilkins-oval.svg';
 
 export {
-    ctaShapeImage,
     deliverImage,
     employeeImage,
     fosterOval,

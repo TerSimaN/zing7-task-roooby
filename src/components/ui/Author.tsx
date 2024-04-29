@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Author = ({ imgSrc = '', imgAlt = '', authorName = '', authorInfo = '' }) => {
     return (
-        <div className="flex flex-row">
+        <div className="flex flex-row mt-auto">
             <Image
                 src={imgSrc}
                 alt={imgAlt}

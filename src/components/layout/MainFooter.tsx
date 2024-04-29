@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { keyboardArrowDownIcon, languageIcon } from "../../../public/assets/icons"
+import { languageIcon } from "../../../public/assets/icons"
 import { facebookLogo, linkedinLogo, rooobyLogo, twitterLogo } from "../../../public/assets/logos";
 import Link from "next/link"
 
@@ -55,8 +55,8 @@ const sections = [
 
 const MainFooter = () => {
     return (
-        <footer className="col-span-12 mt-[9.25rem] mx-[9.25rem]">
-            <div className="flex flex-row justify-between">
+        <footer className="col-span-12 mt-[9.25rem]">
+            <div className="flex flex-row justify-between container">
                 <div className="flex flex-col">
                     <Link href={'/'}>
                         <Image
@@ -105,8 +105,8 @@ const MainFooter = () => {
                     ))}
                 </div>
             </div>
-            <div className="border-t border-roooby-gray-300 opacity-25 mt-[6.25rem] w-full h-[1px]"></div>
-            <div className="flex flex-row items-center justify-between mt-10 mb-10">
+            <div className="border-t border-roooby-gray-300 opacity-25 mt-[6.25rem] mx-auto w-full max-w-[85rem] h-[1px]"></div>
+            <div className="flex flex-row items-center justify-between container mt-10 mb-10">
                 <span className="font-inter font-normal text-roooby-gray-500 text-sm tracking-[0.2px]">© Copyright 2024</span>
                 <ul className="flex flex-row items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
                     {links.map((link, i) => (
@@ -123,12 +123,9 @@ const MainFooter = () => {
                         height={24}
                     />
                     <span className="font-inter font-medium text-sm tracking-[0.2px] ml-2 -mr-1">English</span>
-                    <Image
-                        src={keyboardArrowDownIcon}
-                        alt="Arrow down Icon"
-                        width={16}
-                        height={16}
-                    />
+                    <svg className="fill-roooby-gray-300" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M4.94 6L8 9.09042L11.06 6L12 6.95142L8 11L4 6.95142L4.94 6Z" />
+                    </svg>
                 </div>
             </div>
         </footer>

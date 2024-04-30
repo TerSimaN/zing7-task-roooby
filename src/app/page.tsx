@@ -45,8 +45,8 @@ const cards = [
 
 export default function Home() {
   return (
-    <main className="relative">
-      <div className="bg-roooby-gray-100 pt-[4.5rem]">
+    <main>
+      <div className="relative bg-roooby-gray-100 pt-[4.5rem]">
         <div className="flex flex-col container">
           <h1 className="font-inter font-bold text-roooby-blue text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40rem]">Bringing companies and customers together, anywhere</h1>
           <p className="font-inter font-normal text-lg leading-7 max-w-[29.75rem] mt-6">
@@ -65,12 +65,12 @@ export default function Home() {
           </div>
           <Clients />
         </div>
+        <Image
+          src={headerImage}
+          alt="header image"
+          className="absolute top-[4.5rem] right-0"
+        />
       </div>
-      <Image
-        src={headerImage}
-        alt="header image"
-        className="absolute top-[4.5rem] right-0"
-      />
       <div className="bg-roooby-blue py-[7.5rem]">
         <div className="flex flex-col container gap-y-20">
           <div className="flex flex-row items-center">
@@ -355,7 +355,6 @@ export default function Home() {
         </div>
       </div>
       <Cta />
-      {/* <div className="bg-cta-background h-[29.25rem] ml-16 mt-10"></div> */}
     </main>
   );
 }

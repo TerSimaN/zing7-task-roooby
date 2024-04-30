@@ -13,7 +13,7 @@ const links = [
 
 const MainHeader = () => {
     return (
-        <header className="col-span-12 bg-roooby-gray-100 py-6">
+        <header className="bg-roooby-gray-100 py-6">
             <div className="flex flex-row items-center container">
                 <Link href={'/'} className="mr-[6.25rem]">
                     <Image

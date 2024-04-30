@@ -45,7 +45,7 @@ const cards = [
 
 export default function Home() {
   return (
-    <main className="col-span-12 relative">
+    <main className="relative">
       <div className="bg-roooby-gray-100 pt-[4.5rem]">
         <div className="flex flex-col container">
           <h1 className="font-inter font-bold text-roooby-blue text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40rem]">Bringing companies and customers together, anywhere</h1>

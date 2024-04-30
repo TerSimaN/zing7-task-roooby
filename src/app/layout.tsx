@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body /* className="grid grid-cols-12 gap-x-9" */>
+      <body>
         <MainHeader />
         {children}
         <MainFooter />

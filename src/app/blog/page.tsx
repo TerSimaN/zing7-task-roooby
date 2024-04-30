@@ -31,7 +31,7 @@ const articles = [
 
 export default function Blog() {
     return (
-        <main className="col-span-12">
+        <main>
             <div className="bg-roooby-gray-100 pt-[4.5rem]">
                 <div className="flex flex-col container">
                     <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40.75rem]">

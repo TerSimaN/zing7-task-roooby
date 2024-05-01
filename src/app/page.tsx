@@ -129,10 +129,19 @@ export default function Home() {
         <div className="flex flex-col">
           <div className="border-t border-roooby-gray-300 h-[1px]"></div>
           <div className="flex flex-row gap-24 mt-12">
-            <Image
-              src={marketingImage}
-              alt="marketing image"
-            />
+            <div className="flex flex-col">
+              <Image
+                src={marketingImage}
+                alt="marketing image"
+              />
+              <div className="flex items-center bg-roooby-blue rounded-xl pl-6 pr-3 mx-auto mb-8 w-[457px] h-20">
+                <span className="font-inter font-bold text-white text-lg tracking-[-0.25px]">Automate your sales & marketing</span>
+                <Button
+                  text="Start now"
+                  className="bg-roooby-green-400 rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] ml-2 w-[126px] h-14"
+                />
+              </div>
+            </div>
             <div className="flex flex-col gap-y-4 mt-[3.25rem]">
               <div className="flex items-center justify-center rounded bg-roooby-yellow w-28 h-8">
                 <span className="font-inter font-bold text-roooby-gray-500 text-sm tracking-[1.4px]">MARKETING</span>

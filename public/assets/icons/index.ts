@@ -4,6 +4,7 @@ import magicIcon from './magic-icon.svg';
 import quotationMarkIcon from './quotation-mark-icon.svg';
 import languageIcon from './ic_language.svg';
 import checkmarkIcon from './ic_done.svg';
+import insertLinkIcon from './ic_insert_link.svg';
 
 export {
     headIcon,
@@ -11,5 +12,6 @@ export {
     magicIcon,
     quotationMarkIcon,
     languageIcon,
-    checkmarkIcon
+    checkmarkIcon,
+    insertLinkIcon
 }

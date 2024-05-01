@@ -50,7 +50,7 @@ export default function Blog() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row flex-wrap container gap-x-3 gap-y-[7.5rem] bg-white pb-44 mt-[7.5rem]">
+            <div className="flex flex-row flex-wrap container gap-x-3 gap-y-[7.5rem] pb-44 mt-[7.5rem]">
                 <div className="flex flex-row gap-x-8">
                     <div className="flex flex-col">
                         <div className="border-t border-roooby-gray-300 h-[1px]"></div>

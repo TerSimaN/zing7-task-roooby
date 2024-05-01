@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col container gap-y-[7.5rem] bg-white mt-[7.5rem]">
+      <div className="flex flex-col container gap-y-[7.5rem] mt-[7.5rem]">
         <div className="flex flex-col">
           <div className="border-t border-roooby-gray-300 h-[1px]"></div>
           <div className="flex flex-row gap-24 mt-12">
@@ -206,7 +206,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex flex-col container gap-y-[15rem] bg-white mx-auto mt-[7.5rem] max-w-[71.25rem]">
+      <div className="flex flex-col container gap-y-[15rem] mx-auto mt-[7.5rem] max-w-[71.25rem]">
         <div className="flex flex-col">
           <div className="flex flex-row justify-between items-end">
             <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px]">What’s new at Roooby?</h1>

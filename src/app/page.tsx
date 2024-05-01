@@ -83,7 +83,7 @@ export default function Home() {
           </div>
           <div className="flex flex-row gap-x-2">
             {cards.map((card, i) => (
-              <div key={i} className="flex flex-col bg-roooby-yellow rounded-lg px-8 py-16">
+              <div key={i} className="flex flex-col bg-roooby-yellow hover:-translate-y-2 rounded-lg px-8 py-16">
                 <Image
                   src={card.iconSrc}
                   alt={card.iconAlt}

@@ -1,13 +1,19 @@
+'use client';
+
 import Image from "next/image";
-import { deliverImage, employeeImage, fosterOval, gibbsOval, headerImage, marketingImage, phelpsOval, rossOval, salesImage, serviceImage, wilkinsOval } from "../../public/assets/images";
+import { deliverImage, employeeImage, fosterOval, gibbsOval, headerImage, phelpsOval, rossOval, salesImage, serviceImage, wilkinsOval } from "../../public/assets/images";
 import { asanaLogo, chartsLogo, gearLogo, googleMeetLogo, hubSpotLogo, intercomLogo, microsoftTeamsLogo, slackLogo, zendeskLogo, zoomLogo } from "../../public/assets/logos";
-import { headIcon, laptopIcon, magicIcon, quotationMarkIcon } from "../../public/assets/icons";
+import { quotationMarkIcon } from "../../public/assets/icons";
 import Cta from "@/components/layout/Cta";
 import Article from "@/components/layout/Article";
 import Author from "@/components/ui/Author";
 import CheckmarkItem from "@/components/ui/CheckmarkItem";
 import Clients from "@/components/layout/Clients";
 import Button from "@/components/ui/Button";
+import { useState } from "react";
+import HeadIcon from "@/components/ui/HeadIcon";
+import LaptopIcon from "@/components/ui/LaptopIcon";
+import MagicIcon from "@/components/ui/MagicIcon";
 
 const extensions = [
   { imgSrc: gearLogo, imgAlt: 'gear logo' },
@@ -24,26 +30,39 @@ const extensions = [
 
 const cards = [
   {
-    iconSrc: headIcon,
-    iconAlt: 'head icon',
+    iconName: 'headIcon',
     header: 'Lead customers to happiness',
     paragraph: `Roooby Support helps you provide personalized support when and where customers need it, so customers stay happy.`
   },
   {
-    iconSrc: laptopIcon,
-    iconAlt: 'laptop icon',
+    iconName: 'laptopIcon',
     header: 'Support your support',
     paragraph: `Productive agents are happy agents. Give them all the support tools and information they need to best serve your customers.`
   },
   {
-    iconSrc: magicIcon,
-    iconAlt: 'magic icon',
+    iconName: 'magicIcon',
     header: 'Grow without growing pains',
     paragraph: `Our software is powerful enough to handle the most complex business, yet flexible enough to scale with you as you grow.`
   }
 ]
 
+function getIcon(name: string, fill: string) {
+  switch (name) {
+    case 'headIcon':
+      return <HeadIcon fillColor={`${fill}`} />;
+    case 'laptopIcon':
+      return <LaptopIcon fillColor={`${fill}`} />;
+    case 'magicIcon':
+      return <MagicIcon fillColor={`${fill}`} />;
+
+    default:
+      break;
+  }
+}
+
 export default function Home() {
+  const [isSelected, setSelected] = useState(0);
+
   return (
     <main>
       <div className="relative bg-roooby-gray-100 pt-[4.5rem]">
@@ -56,9 +75,9 @@ export default function Home() {
           </p>
           <div className="flex flex-col gap-y-3 mt-16">
             <form>
-              <div className="flex flex-row justify-between items-center bg-white border border-roooby-gray-200 rounded-xl pl-6 pr-2 py-2 max-w-[28.5rem]">
-                <input className="focus:outline-none placeholder:font-inter placeholder:font-medium placeholder:text-lg placeholder:tracking-[-0.25px] placeholder:text-roooby-gray-300" placeholder="Enter your email" type="email" name="email" id="email" />
-                <button className="bg-roooby-blue rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] w-36 h-14" type="submit">Try For Free</button>
+              <div className="flex flex-row justify-between items-center bg-white border border-roooby-gray-200 rounded-xl pr-2 max-w-[28.5rem]">
+                <input className="rounded-l-lg font-inter font-medium text-lg tracking-[-0.25px] placeholder:text-roooby-gray-300 focus:outline-none ml-6 w-[19rem] h-[4.5rem]" placeholder="Enter your email" type="email" name="email" />
+                <button className="bg-roooby-blue-dark rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] w-[8.75rem] h-14" type="submit">Try For Free</button>
               </div>
             </form>
             <span className="font-inter font-normal text-roooby-gray-500 text-sm pl-4">Full access. No credit card required.</span>
@@ -71,7 +90,7 @@ export default function Home() {
           className="absolute top-[4.5rem] right-0"
         />
       </div>
-      <div className="bg-roooby-blue py-[7.5rem]">
+      <div className="bg-roooby-blue-dark py-[7.5rem]">
         <div className="flex flex-col container gap-y-20">
           <div className="flex flex-row items-center">
             <h1 className="z-10 font-inter font-bold text-white text-5xl max-w-[39.5rem]">Here's how Roooby can benefit your business</h1>
@@ -81,17 +100,22 @@ export default function Home() {
               help, address any problems faster.
             </p>
           </div>
-          <div className="flex flex-row gap-x-2">
+          <div className="flex flex-row gap-x-2 h-[27.5rem]">
             {cards.map((card, i) => (
-              <div key={i} className="flex flex-col bg-roooby-yellow hover:-translate-y-2 rounded-lg px-8 py-16">
-                <Image
-                  src={card.iconSrc}
-                  alt={card.iconAlt}
-                  className="h-[4.5rem]"
-                />
-                <div className="border-t border-black mt-14 h-[1px]"></div>
-                <h1 className="font-inter font-bold text-xl tracking-[0.38px] mt-4">{card.header}</h1>
-                <p className="font-inter font-normal text-base leading-6 mt-3">{card.paragraph}</p>
+              <div
+                key={i}
+                className={`flex flex-col ${isSelected === i ? `bg-roooby-yellow -translate-y-3` : `bg-roooby-blue-pale`} rounded-lg px-8 py-16`}
+                onMouseOver={() => setSelected(i)}>
+                <div className="h-[4.5rem]">
+                  {getIcon(card.iconName, `${isSelected === i ? 'black' : 'white'}`)}
+                </div>
+                <div className={`border-t ${isSelected === i ? `border-black opacity-70` : `opacity-25`} mt-14 h-[1px]`}></div>
+                <h1 className={`font-inter font-bold ${isSelected === i ? `` : `text-white`} text-xl tracking-[0.38px] mt-4`}>
+                  {card.header}
+                </h1>
+                <p className={`font-inter font-normal ${isSelected === i ? `` : `text-white`} text-base leading-6 mt-3`}>
+                  {card.paragraph}
+                </p>
               </div>
             ))}
           </div>
@@ -129,12 +153,8 @@ export default function Home() {
         <div className="flex flex-col">
           <div className="border-t border-roooby-gray-300 h-[1px]"></div>
           <div className="flex flex-row gap-24 mt-12">
-            <div className="flex flex-col">
-              <Image
-                src={marketingImage}
-                alt="marketing image"
-              />
-              <div className="flex items-center bg-roooby-blue rounded-xl pl-6 pr-3 mx-auto mb-8 w-[457px] h-20">
+            <div className="bg-marketing-background rounded-xl place-content-end pb-8 w-full max-w-[555px] h-[555px]">
+              <div className="flex items-center bg-roooby-blue-dark rounded-xl pl-6 pr-3 mx-auto w-[28.5rem] h-20">
                 <span className="font-inter font-bold text-white text-lg tracking-[-0.25px]">Automate your sales & marketing</span>
                 <Button
                   text="Start now"

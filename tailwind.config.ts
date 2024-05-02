@@ -24,12 +24,16 @@ const config: Config = {
           100: '#ebfbf3',
           400: '#00cc61'
         },
-        'roooby-blue': '#150050',
+        'roooby-blue': {
+          'pale': '#1e0a57',
+          'dark': '#150050'
+        },
         'roooby-teal': '#004050',
         'roooby-yellow': '#ffe377'
       },
       backgroundImage: {
-        'cta-background': "url('/assets/images/cta-bg-image.svg')"
+        'cta-background': "url('/assets/images/cta-bg-image.svg')",
+        'marketing-background': "url('/assets/images/marketing-bg-image.svg')"
       }
     },
     container: {

@@ -73,9 +73,9 @@ export default function Home() {
             increase business revenue with enterprise-grade links
             built to acquire and engage cutomers.
           </p>
-          <div className="flex flex-col gap-y-3 mt-16">
+          <div className="flex flex-col gap-y-3 mt-16 max-w-[28.5rem]">
             <form>
-              <div className="flex flex-row justify-between items-center bg-white border border-roooby-gray-200 rounded-xl pr-2 max-w-[28.5rem]">
+              <div className="flex flex-row justify-between items-center bg-white border border-roooby-gray-200 rounded-xl pr-2">
                 <input className="rounded-l-lg font-inter font-medium text-lg tracking-[-0.25px] placeholder:text-roooby-gray-300 focus:outline-none ml-6 w-[19rem] h-[4.5rem]" placeholder="Enter your email" type="email" name="email" />
                 <button className="bg-roooby-blue-dark rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] w-[8.75rem] h-14" type="submit">Try For Free</button>
               </div>

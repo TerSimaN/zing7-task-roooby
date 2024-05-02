@@ -34,7 +34,7 @@ const MainHeader = () => {
                         text="Log In"
                     />
                     <Button
-                        className="font-inter font-bold text-white text-xs tracking-[-0.19px] bg-roooby-blue rounded w-28 h-8"
+                        className="font-inter font-bold text-white text-xs tracking-[-0.19px] bg-roooby-blue-dark rounded w-28 h-8"
                         text="Try For Free"
                     />
                 </div>

@@ -55,21 +55,21 @@ const sections = [
 
 const MainFooter = () => {
     return (
-        <footer className="mt-[9.25rem]">
-            <div className="flex flex-row justify-between container">
-                <div className="flex flex-col">
+        <footer className="sm:mt-[9.25rem] mt-[4.75rem]">
+            <div className="flex sm:flex-row flex-col sm:justify-between max-md:items-center container">
+                <div className="flex flex-col max-sm:items-center">
                     <Link href={'/'}>
                         <Image
                             src={rooobyLogo}
                             alt="Roooby Logo"
                         />
                     </Link>
-                    <p className="font-inter font-normal text-roooby-gray-500 text-sm leading-6 mt-6 w-[16.5rem]">
+                    <p className="font-inter font-normal text-roooby-gray-500 text-sm leading-6 max-sm:text-center mt-6 w-[16.5rem]">
                         We built an elegant solution.
                         <br />
                         Our team created a fully integrated sales and marketing solution for SMBs
                     </p>
-                    <div className="flex flex-row gap-4 mt-6 w-[6.5rem] h-6">
+                    <div className="flex flex-row sm:gap-4 justify-between mt-6 w-[6.5rem] h-6">
                         <Image
                             src={twitterLogo}
                             alt="Twitter"
@@ -90,11 +90,11 @@ const MainFooter = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-row items-start justify-between w-full max-w-[768px]">
+                <div className="flex sm:flex-row flex-col sm:items-start items-center justify-between w-full max-w-[768px]">
                     {sections.map((section) => (
-                        <div key={section.name} className="flex flex-col gap-y-3">
-                            <h2 className="font-inter font-bold text-base">{section.name}</h2>
-                            <ul className="font-intet font-normal text-sm leading-9 tracking-[0.2px]">
+                        <div key={section.name} className="flex flex-col sm:gap-y-3 max-sm:mt-6">
+                            <h2 className="font-inter font-bold text-base max-sm:text-center">{section.name}</h2>
+                            <ul className="font-intet font-normal text-sm leading-9 tracking-[0.2px] max-sm:text-center">
                                 {section.links.map((link, i) => (
                                     <li key={i}>
                                         <Link href={link.href}>{link.name}</Link>
@@ -105,10 +105,10 @@ const MainFooter = () => {
                     ))}
                 </div>
             </div>
-            <div className="border-t border-roooby-gray-300 opacity-25 mt-[6.25rem] mx-auto w-full max-w-[85rem] h-[1px]"></div>
-            <div className="flex flex-row items-center justify-between container mt-10 mb-10">
+            <div className="border-t border-roooby-gray-300 opacity-25 sm:mt-[6.25rem] mt-12 mx-auto w-full max-w-[85rem] h-[1px]"></div>
+            <div className="flex sm:flex-row flex-col max-sm:gap-y-6 items-center justify-between container mt-10 mb-10">
                 <span className="font-inter font-normal text-roooby-gray-500 text-sm tracking-[0.2px]">© Copyright 2024</span>
-                <ul className="flex flex-row items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
+                <ul className="flex sm:flex-row flex-col max-sm:gap-y-3 items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
                     {links.map((link, i) => (
                         <li key={i}>
                             <Link href={link.href}>{link.name}</Link>

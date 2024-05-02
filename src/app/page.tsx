@@ -65,47 +65,47 @@ export default function Home() {
 
   return (
     <main>
-      <div className="relative bg-roooby-gray-100 pt-[4.5rem]">
+      <div className="relative bg-roooby-gray-100 sm:pt-[4.5rem] pt-9">
         <div className="flex flex-col container">
-          <h1 className="font-inter font-bold text-roooby-blue text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40rem]">Bringing companies and customers together, anywhere</h1>
-          <p className="font-inter font-normal text-lg leading-7 max-w-[29.75rem] mt-6">
+          <h1 className="font-inter font-bold text-roooby-blue sm:text-[4rem] text-[3rem] leading-[4.75rem] tracking-[-0.89px] max-sm:text-center max-w-[40rem]">Bringing companies and customers together, anywhere</h1>
+          <p className="font-inter font-normal text-lg leading-7 max-sm:text-center max-sm:px-2 mt-6 max-w-[29.75rem]">
             An awesome & powefull tools for your business,
             increase business revenue with enterprise-grade links
             built to acquire and engage cutomers.
           </p>
-          <div className="flex flex-col gap-y-3 mt-16 max-w-[28.5rem]">
+          <div className="flex flex-col gap-y-3 sm:mt-16 mt-8 max-w-[28.5rem]">
             <form>
-              <div className="flex flex-row justify-between items-center bg-white border border-roooby-gray-200 rounded-xl pr-2">
-                <input className="rounded-l-lg font-inter font-medium text-lg tracking-[-0.25px] placeholder:text-roooby-gray-300 focus:outline-none ml-6 w-[19rem] h-[4.5rem]" placeholder="Enter your email" type="email" name="email" />
-                <button className="bg-roooby-blue-dark rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] w-[8.75rem] h-14" type="submit">Try For Free</button>
+              <div className="flex sm:flex-row flex-col justify-between items-center sm:bg-white sm:border sm:border-roooby-gray-200 sm:rounded-xl pr-2">
+                <input className="max-sm:bg-white sm:border max-sm:border-roooby-gray-200 max-sm:rounded-xl sm:rounded-l-lg font-inter font-medium text-lg tracking-[-0.25px] placeholder:text-roooby-gray-300 focus:outline-none max-sm:pl-4 sm:ml-6 w-[19rem] h-[4.5rem]" placeholder="Enter your email" type="email" name="email" />
+                <button className="bg-roooby-blue-dark rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] max-sm:mt-2 sm:w-[8.75rem] max-sm:w-[19rem] h-14" type="submit">Try For Free</button>
               </div>
             </form>
-            <span className="font-inter font-normal text-roooby-gray-500 text-sm pl-4">Full access. No credit card required.</span>
+            <span className="font-inter font-normal text-roooby-gray-500 text-sm max-sm:text-center sm:pl-4">Full access. No credit card required.</span>
           </div>
+          <Image
+            src={headerImage}
+            alt="header image"
+            className="sm:absolute sm:top-[4.5rem] sm:right-0 max-sm:mt-12"
+          />
           <Clients />
         </div>
-        <Image
-          src={headerImage}
-          alt="header image"
-          className="absolute top-[4.5rem] right-0"
-        />
       </div>
-      <div className="bg-roooby-blue-dark py-[7.5rem]">
+      <div className="bg-roooby-blue-dark sm:py-[7.5rem] py-16">
         <div className="flex flex-col container gap-y-20">
-          <div className="flex flex-row items-center">
-            <h1 className="z-10 font-inter font-bold text-white text-5xl max-w-[39.5rem]">Here's how Roooby can benefit your business</h1>
-            <p className="font-inter font-normal text-white text-lg leading-7 mt-9 max-w-[30.5rem]">
+          <div className="flex sm:flex-row flex-col items-center max-sm:px-4">
+            <h1 className="z-10 font-inter font-bold text-white text-5xl max-sm:text-center max-w-[39.5rem]">Here's how Roooby can benefit your business</h1>
+            <p className="font-inter font-normal text-white text-lg leading-7 max-sm:text-center mt-9 max-w-[30.5rem]">
               Build more meaningful and lasting relationships — better
               understand their needs, identify new opportunities to
               help, address any problems faster.
             </p>
           </div>
-          <div className="flex flex-row gap-x-2 h-[27.5rem]">
+          <div className="flex sm:flex-row flex-col sm:gap-x-2 gap-y-2 max-sm:px-4 sm:h-[27.5rem]">
             {cards.map((card, i) => (
               <div
                 key={i}
                 className={`flex flex-col ${isSelected === i ? `bg-roooby-yellow -translate-y-3` : `bg-roooby-blue-pale`} rounded-lg px-8 py-16`}
-                onMouseOver={() => setSelected(i)}>
+                onClick={() => setSelected(i)}>
                 <div className="h-[4.5rem]">
                   {getIcon(card.iconName, `${isSelected === i ? 'black' : 'white'}`)}
                 </div>
@@ -121,10 +121,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col container gap-y-[7.5rem] mt-[7.5rem]">
+      <div className="flex flex-col container sm:gap-y-[7.5rem] gap-y-16 sm:mt-[7.5rem] mt-20">
         <div className="flex flex-col">
           <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-          <div className="flex flex-row gap-24 mt-12">
+          <div className="flex sm:flex-row flex-col sm:gap-24 gap-12 mt-12 max-sm:px-4">
             <div className="flex flex-col gap-y-4 mt-11">
               <div className="flex items-center justify-center rounded bg-roooby-yellow w-16 h-8">
                 <span className="font-inter font-bold text-roooby-gray-500 text-sm tracking-[1.4px]">SALES</span>
@@ -152,13 +152,13 @@ export default function Home() {
         </div>
         <div className="flex flex-col">
           <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-          <div className="flex flex-row gap-24 mt-12">
-            <div className="bg-marketing-background rounded-xl place-content-end pb-8 w-full max-w-[555px] h-[555px]">
-              <div className="flex items-center bg-roooby-blue-dark rounded-xl pl-6 pr-3 mx-auto w-[28.5rem] h-20">
+          <div className="flex sm:flex-row flex-col sm:gap-24 gap-12 mt-12 max-sm:px-4">
+            <div className="bg-marketing-background rounded-xl place-content-end sm:pb-8 max-sm:pb-4 w-full max-w-[555px] h-[555px] max-sm:h-[23.75rem]">
+              <div className="flex max-sm:flex-col max-sm:gap-y-2 items-center bg-roooby-blue-dark rounded-xl sm:pl-6 sm:pr-3 max-sm:px-4 max-sm:pt-2 mx-auto sm:w-[28.5rem] sm:h-20 max-sm:h-28">
                 <span className="font-inter font-bold text-white text-lg tracking-[-0.25px]">Automate your sales & marketing</span>
                 <Button
                   text="Start now"
-                  className="bg-roooby-green-400 rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] ml-2 w-[126px] h-14"
+                  className="bg-roooby-green-400 rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] sm:ml-2 sm:w-[126px] max-sm:w-full h-14"
                 />
               </div>
             </div>
@@ -185,8 +185,8 @@ export default function Home() {
         </div>
         <div className="flex flex-col">
           <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-          <div className="flex flex-row gap-24 mt-12">
-            <div className="flex flex-col gap-y-4 mt-20">
+          <div className="flex sm:flex-row flex-col sm:gap-24 gap-12 mt-12 max-sm:px-4">
+            <div className="flex flex-col gap-y-4 mt-11">
               <div className="flex items-center justify-center rounded bg-roooby-yellow w-[5.5rem] h-8">
                 <span className="font-inter font-bold text-roooby-gray-500 text-sm tracking-[1.4px]">SERVICE</span>
               </div>
@@ -213,12 +213,12 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-roooby-gray-100">
-        <div className="flex flex-col container py-[7.5rem] mt-[7.5rem]">
-          <h1 className="font-inter font-bold text-5xl leading-[4.25rem] tracking-[-0.67px] mx-auto">Over 300+ integrations</h1>
-          <span className="font-inter font-normal text-roooby-gray-600 text-lg leading-7 mx-auto mt-3">
+        <div className="flex flex-col container sm:py-[7.5rem] py-16 mt-[7.5rem]">
+          <h1 className="font-inter font-bold text-5xl leading-[4.25rem] tracking-[-0.67px] max-sm:text-center mx-auto">Over 300+ integrations</h1>
+          <span className="font-inter font-normal text-roooby-gray-600 text-lg leading-7 max-sm:text-center mx-auto mt-3">
             Expand the capabilities of <span className="font-inter font-black text-roooby-gray-600 text-lg leading-7">Roooby</span> with hundreds of apps and integrations
           </span>
-          <div className="flex flex-row flex-wrap gap-2 mt-[4.5rem]">
+          <div className="flex sm:flex-row flex-col max-sm:items-center flex-wrap gap-2 sm:mt-[4.5rem] mt-9">
             {extensions.map((extension, i) => (
               <Image
                 src={extension.imgSrc}
@@ -231,23 +231,23 @@ export default function Home() {
             className="font-inter font-medium text-2xl tracking-[0.51px] mx-auto mt-[4.5rem]"
             text="See all apps and extensions"
             hasIcon="true"
-            iconColor="fill-roooby-blue"
+            iconColor="fill-roooby-blue-dark"
           />
         </div>
       </div>
-      <div className="flex flex-col container gap-y-[15rem] mx-auto mt-[7.5rem] max-w-[71.25rem]">
+      <div className="flex flex-col container sm:gap-y-[15rem] gap-y-[7.5rem] mx-auto sm:mt-[7.5rem] mt-16 max-w-[71.25rem]">
         <div className="flex flex-col">
-          <div className="flex flex-row justify-between items-end">
-            <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px]">What’s new at Roooby?</h1>
+          <div className="flex sm:flex-row flex-col justify-between sm:items-end max-sm:items-center">
+            <h1 className="font-inter font-bold sm:text-[4rem] text-5xl leading-[4.75rem] tracking-[-0.89px] max-sm:text-center">What’s new at Roooby?</h1>
             <Button
-              className="font-inter font-medium text-xl tracking-[0.43px]"
+              className="font-inter font-medium text-xl tracking-[0.43px] max-sm:px-40 max-sm:w-full"
               text="See all"
               hasIcon="true"
               iconColor="fill-roooby-green-400"
               iconMargin="-ml-1"
             />
           </div>
-          <div className="flex flex-row gap-x-7 mt-[4.5rem]">
+          <div className="flex sm:flex-row flex-col gap-x-7 max-sm:gap-y-14 max-sm:px-4 sm:mt-[4.5rem] mt-10">
             <Article
               label="Service"
               imgSrc={deliverImage}
@@ -271,16 +271,16 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col">
-          <h1 className="font-inter font-bold text-5xl leading-[4.25rem] tracking-[-0.67px]">Real-life results and revenue</h1>
-          <span className="font-inter font-normal text-roooby-gray-600 text-lg leading-7 mt-3">See how companies like yours have smashed their sales success goals</span>
-          <div className="flex flex-col mt-[4.5rem]">
+          <h1 className="font-inter font-bold text-5xl leading-[4.25rem] tracking-[-0.67px] max-sm:text-center">Real-life results and revenue</h1>
+          <span className="font-inter font-normal text-roooby-gray-600 text-lg leading-7 max-sm:text-center mt-3">See how companies like yours have smashed their sales success goals</span>
+          <div className="flex flex-col sm:mt-[4.5rem] mt-12 max-sm:px-4">
             <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-            <div className="flex flex-row gap-x-[9.25rem] mt-12">
-              <div className="flex flex-col gap-y-6">
+            <div className="flex sm:flex-row flex-col gap-x-[9.25rem] mt-12">
+              <div className="flex flex-col sm:gap-y-6 max-sm:gap-y-2">
                 <h1 className="font-inter font-bold text-7xl leading-[4.5rem] tracking-[-1px]">$2.5 M</h1>
                 <span className="font-inter font-bold text-xl">Generate sales</span>
               </div>
-              <div className="flex flex-col gap-y-8">
+              <div className="flex flex-col gap-y-8 max-sm:mt-6">
                 <p className="font-inter font-medium text-3xl leading-10 tracking-[-0.44px] w-full max-w-[47rem]">
                   Using Кирилица CRM is one of the best decisions we’ve ever made.
                   We’ve seen our annual revenue explode, and the outlook just keeps getting sunnier.
@@ -294,14 +294,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col mt-[4.5rem]">
+          <div className="flex flex-col sm:mt-[4.5rem] mt-12 max-sm:px-4">
             <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-            <div className="flex flex-row gap-x-[9.25rem] mt-12">
-              <div className="flex flex-col gap-y-6">
+            <div className="flex sm:flex-row flex-col gap-x-[9.25rem] mt-12">
+              <div className="flex flex-col sm:gap-y-6 max-sm:gap-y-2">
                 <h1 className="font-inter font-bold text-7xl leading-[4.5rem] tracking-[-1px]">45%</h1>
                 <span className="font-inter font-bold text-xl">Grew revenue</span>
               </div>
-              <div className="flex flex-col gap-y-8 ml-auto">
+              <div className="flex flex-col gap-y-8 ml-auto max-sm:mt-6">
                 <p className="font-inter font-medium text-3xl leading-10 tracking-[-0.44px] w-full max-w-[47rem]">
                   Yoora is created for sales people. It’s the kind of software that just works.
                   I don’t have to try to make it work. It already does. It’s just perfect.
@@ -317,19 +317,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-roooby-gray-100 mt-[11.25rem]">
-        <div className="flex flex-col container py-[7.5rem]">
-          <div className="flex flex-row justify-between items-end">
-            <h1 className="font-inter font-bold text-5xl leading-[3.5rem] tracking-[-0.67px] w-full max-w-[35.5rem]">We love our Customers and They love us too</h1>
+      <div className="bg-roooby-gray-100 sm:mt-[11.25rem] mt-20">
+        <div className="flex flex-col max-sm:items-center container sm:py-[7.5rem] max-sm:py-16">
+          <div className="flex sm:flex-row flex-col justify-between sm:items-end max-sm:items-center">
+            <h1 className="font-inter font-bold text-5xl leading-[3.5rem] tracking-[-0.67px] max-sm:text-center w-full max-w-[35.5rem]">We love our Customers and They love us too</h1>
             <Button
-              className="font-inter font-medium text-xl tracking-[0.43px]"
+              className="font-inter font-medium text-xl tracking-[0.43px] max-sm:px-40 max-sm:mt-4 max-sm:w-full"
               text="See all"
               hasIcon="true"
               iconColor="fill-roooby-green-400"
               iconMargin="-ml-1"
             />
           </div>
-          <div className="flex flex-row gap-x-7 mt-[4.5rem]">
+          <div className="flex sm:flex-row flex-col sm:gap-x-7 max-sm:gap-y-14 sm:mt-[4.5rem] mt-9">
             <div className="flex flex-col max-w-[22.5rem]">
               <Image
                 src={quotationMarkIcon}

@@ -6,13 +6,13 @@ import { insertLinkIcon } from "../../../../public/assets/icons";
 export default function BlogDetails() {
     return (
         <main>
-            <div className="bg-roooby-gray-100 pt-[4.5rem]">
-                <div className="flex flex-col items-center gap-y-12 container">
+            <div className="bg-roooby-gray-100 sm:pt-[4.5rem] pt-9">
+                <div className="flex flex-col items-center sm:gap-y-12 gap-y-8 container max-sm:px-4">
                     <div className="flex flex-col max-w-[46.75rem]">
                         <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">Sales</span>
                         <div className="border-t border-roooby-gray-300 mt-4 h-[1px]"></div>
-                        <h1 className="font-inter font-bold text-5xl leading-[3.5rem] tracking-[-0.67px] mt-4">The Psychology of Short-Form Content: Why We Love Bite</h1>
-                        <span className="font-inter font-medium text-base mt-6">05 Sep 2024, <span className="text-roooby-gray-300">by Joshua Nash</span></span>
+                        <h1 className="font-inter font-bold sm:text-5xl text-4xl leading-[3.5rem] tracking-[-0.67px] max-sm:text-center mt-4">The Psychology of Short-Form Content: Why We Love Bite</h1>
+                        <span className="font-inter font-medium text-base max-sm:text-center mt-6">05 Sep 2024, <span className="text-roooby-gray-300">by Joshua Nash</span></span>
                     </div>
                     <Image
                         src="/assets/images/blogImages/blogDetailsImages/blog-header-image.svg"
@@ -22,7 +22,7 @@ export default function BlogDetails() {
                     />
                 </div>
             </div>
-            <div className="flex flex-col mx-auto mt-[6.25rem] max-w-[46.75rem]">
+            <div className="flex flex-col max-sm:px-4 mx-auto sm:mt-[6.25rem] mt-12 max-w-[46.75rem]">
                 <p className="font-inter font-medium text-2xl leading-9 tracking-[-0.33px]">
                     The Psychology of Short-Form Content: Why We Love Bite-Sized Videos.
                     The Psychology of Short-Form Content: Why We Love Bite-Sized Videos.
@@ -62,9 +62,9 @@ export default function BlogDetails() {
                     alt="blog-content-image"
                     width={748}
                     height={405}
-                    className="mt-[4.5rem]"
+                    className="sm:mt-[4.5rem] mt-9"
                 />
-                <div className="flex flex-col gap-y-4 mt-[4.5rem]">
+                <div className="flex flex-col gap-y-4 sm:mt-[4.5rem] mt-9">
                     <h1 className="font-inter font-bold text-5xl tracking-[-0.67px]">What is a sales funnel?</h1>
                     <p className="font-inter font-normal text-lg leading-7">
                         In order to fully answer the question “What is a sales funnel?”, we need to tackle the different steps of the funnel.
@@ -72,7 +72,7 @@ export default function BlogDetails() {
                         these are usually structured into three distinct stages.
                     </p>
                 </div>
-                <div className="flex flex-col mt-[4.5rem]">
+                <div className="flex flex-col sm:mt-[4.5rem] mt-10">
                     <h1 className="font-inter font-bold text-[2rem] leading-10 tracking-[-0.44px]">1. Top of the sales funnel: Awareness and discovery</h1>
                     <p className="font-inter font-normal text-lg leading-7 mt-3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -137,10 +137,10 @@ export default function BlogDetails() {
                     </div>
                 </div>
             </div>
-            <div className="bg-roooby-gray-100 py-[7.5rem] mt-[11.25rem]">
+            <div className="bg-roooby-gray-100 max-sm:px-4 sm:py-[7.5rem] py-14 sm:mt-[11.25rem] mt-20">
                 <div className="flex flex-col gap-y-[4.5rem] container">
-                    <h1 className="font-inter font-bold text-[4rem] leading-[4.5rem] tracking-[-0.89px]">More from this topic</h1>
-                    <div className="flex flex-row gap-x-7">
+                    <h1 className="font-inter font-bold sm:text-[4rem] text-6xl leading-[4.5rem] tracking-[-0.89px] max-sm:text-center">More from this topic</h1>
+                    <div className="flex sm:flex-row flex-col items-center sm:gap-x-7 gap-y-7">
                         <Article
                             label="Sales"
                             header="The best cities for sales careers in 2022"

@@ -104,24 +104,23 @@ export default function Pricing() {
 
     return (
         <main>
-            <div className="bg-roooby-gray-100 pt-[4.5rem] pb-[7.5rem]">
-                <div className="border-t-[3px] border-black w-10"></div>
+            <div className="bg-roooby-gray-100 sm:pt-[4.5rem] pt-9 sm:pb-[7.5rem] pb-14">
                 <div className="flex flex-col container">
-                    <div className="flex flex-row items-center gap-x-[5.75rem]">
-                        <h1 className="font-inter font-bold text-[4rem] leading-[4.5rem] tracking-[-0.89px]">
+                    <div className="flex sm:flex-row flex-col items-center sm:gap-x-[5.75rem] gap-y-9">
+                        <h1 className="font-inter font-bold text-[4rem] leading-[4.5rem] tracking-[-0.89px] max-sm:text-center">
                             Choose the right plan
                             <br />
                             <span className="text-roooby-gray-300">for your business</span>
                         </h1>
-                        <p className="font-inter font-normal text-lg leading-7 mt-auto max-w-[22.5rem]">
+                        <p className="font-inter font-normal text-lg leading-7 max-sm:text-center mt-auto max-w-[22.5rem]">
                             Built with love for growing businesses.
                             Check out the Roooby CRM pricing grid below.
                             Switch between plans at any time.
                         </p>
                     </div>
-                    <div className="flex flex-row gap-x-2 mt-[6.25rem]">
+                    <div className="flex sm:flex-row flex-col sm:gap-x-2 gap-y-4 sm:mt-[6.25rem] mt-12">
                         {cards.map((card, i) => (
-                            <div key={i} className="flex flex-col bg-white rounded-xl px-8 py-8 max-w-[23.5rem]">
+                            <div key={i} className="flex flex-col bg-white rounded-xl px-8 py-8 max-sm:mx-auto max-w-[23.5rem]">
                                 <div className="flex flex-row items-center">
                                     <h1 className="font-inter font-bold text-2xl">{card.name}</h1>
                                     <span
@@ -143,7 +142,7 @@ export default function Pricing() {
                                         border rounded-lg font-inter font-bold text-lg tracking-[-0.25px] mt-6 w-full h-14`
                                     }
                                 />
-                                <span className="font-inter font-normal text-roooby-gray-400 text-sm tracking-[0.16px] mt-3">Free 14-day trial. No credit card required.</span>
+                                <span className="font-inter font-normal text-roooby-gray-400 text-sm tracking-[0.16px] max-sm:text-center mt-3">Free 14-day trial. No credit card required.</span>
                                 <div className="border-t border-roooby-gray-300 mt-8 h-[1px]"></div>
                                 <ul className="flex flex-col gap-y-4 font-inter font-normal text-base leading-7 tracking-[0.18px] mt-6">
                                     {card.features.map((feature, j) => (
@@ -159,24 +158,24 @@ export default function Pricing() {
                             </div>
                         ))}
                     </div>
-                    <div className="border-t border-roooby-gray-300 mt-[6.25rem] h-[1px]"></div>
-                    <div className="flex flex-row gap-x-11 items-center mt-12">
-                        <h1 className="font-inter font-bold text-[2rem] leading-10 tracking-[-0.44px]">Need help choosing the right plan?</h1>
-                        <div className="flex flex-row gap-x-7 ml-auto">
+                    <div className="border-t border-roooby-gray-300 sm:mt-[6.25rem] mt-12 h-[1px]"></div>
+                    <div className="flex sm:flex-row flex-col sm:gap-x-11 gap-y-11 items-center mt-12">
+                        <h1 className="font-inter font-bold text-[2rem] leading-10 tracking-[-0.44px] max-sm:text-center">Need help choosing the right plan?</h1>
+                        <div className="flex sm:flex-row flex-col sm:gap-x-7 gap-y-4 sm:ml-auto">
                             <Button
                                 text="Contact sales"
-                                className="bg-white border border-roooby-gray-200 rounded-lg font-inter font-bold text-lg tracking-[-0.25px] w-[10.5rem] h-14"
+                                className="bg-white border border-roooby-gray-200 rounded-lg font-inter font-bold text-lg tracking-[-0.25px] sm:w-[10.5rem] w-64 h-14"
                             />
                             <Button
                                 text="Compare plans"
-                                className="bg-roooby-blue-dark rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] w-[10.5rem] h-14"
+                                className="bg-roooby-blue-dark rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] sm:w-[10.5rem] w-64 h-14"
                             />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col container my-[9.25rem]">
-                <h1 className="font-inter font-bold text-[4rem] leading-[4.5rem] tracking-[-0.89px] max-w-[37.25rem]">Frequently asked questions</h1>
+            <div className="flex flex-col container max-sm:px-4 sm:my-[9.25rem] my-[4.5rem]">
+                <h1 className="font-inter font-bold text-[4rem] leading-[4.5rem] tracking-[-0.89px] max-sm:text-center max-w-[37.25rem]">Frequently asked questions</h1>
                 <div className="flex flex-col ml-auto mt-5 max-w-[59.185rem]">
                     {accordions.map((accordion, i) => (
                         <details key={i}>

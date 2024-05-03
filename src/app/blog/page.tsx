@@ -1,6 +1,18 @@
+'use client';
+
 import Article from "@/components/layout/Article";
 import Cta from "@/components/layout/Cta";
 import Image from "next/image";
+import { useState } from "react";
+
+const tabs = [
+    { name: 'All Articles' },
+    { name: 'Sales' },
+    { name: 'Marketing' },
+    { name: 'Service' },
+    { name: 'Product' },
+    { name: 'News' }
+]
 
 const articles = [
     {
@@ -30,35 +42,41 @@ const articles = [
 ]
 
 export default function Blog() {
+    const [selected, setSelected] = useState(0);
+
     return (
         <main>
-            <div className="bg-roooby-gray-100 pt-[4.5rem]">
-                <div className="flex flex-col container">
-                    <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40.75rem]">
+            <div className="bg-roooby-gray-100 sm:pt-[4.5rem] pt-9">
+                <div className="flex flex-col container max-sm:px-4">
+                    <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-sm:text-center max-w-[40.75rem]">
                         News and insights <span className="font-inter font-bold text-roooby-gray-300 text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40.75rem]">from our experts</span>
                     </h1>
-                    <div className="flex flex-col mt-[6.25rem] max-w-[36.25rem]">
-                        <ul className="flex flex-row justify-between items-center">
-                            <li className="font-inter font-medium text-lg">All Articles</li>
-                            <li className="font-inter font-medium text-roooby-gray-400 text-lg">Sales</li>
-                            <li className="font-inter font-medium text-roooby-gray-400 text-lg">Marketing</li>
-                            <li className="font-inter font-medium text-roooby-gray-400 text-lg">Service</li>
-                            <li className="font-inter font-medium text-roooby-gray-400 text-lg">Product</li>
-                            <li className="font-inter font-medium text-roooby-gray-400 text-lg">News</li>
+                    <div className="flex flex-col sm:mt-[6.25rem] mt-12 max-w-[36.25rem]">
+                        <ul className="flex flex-row max-sm:flex-wrap sm:justify-between items-center max-sm:gap-x-12 max-sm:gap-y-4">
+                            {tabs.map((tab, i) => (
+                                <div key={tab.name + i} className="flex flex-col items-center sm:gap-y-7 gap-y-3">
+                                    <li key={i}
+                                        className={`font-inter font-medium ${selected === i ? `` : `text-roooby-gray-400`} text-lg select-none`}
+                                        onClick={() => setSelected(i)}
+                                    >
+                                        {tab.name}
+                                    </li>
+                                    <div className={`${selected === i ? `visible` : `invisible`} border-t-[3px] border-roooby-green-400 w-[86px] h-[3px]`}></div>
+                                </div>
+                            ))}
                         </ul>
-                        <div className="border-t-[3px] border-roooby-green-400 mt-7 w-[86px] h-[3px]"></div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row flex-wrap container gap-x-3 gap-y-[7.5rem] pb-44 mt-[7.5rem]">
-                <div className="flex flex-row gap-x-8">
+            <div className="flex sm:flex-row flex-col flex-wrap container gap-x-3 sm:gap-y-[7.5rem] gap-y-14 max-sm:px-6 sm:pb-44 pb-20 sm:mt-[7.5rem] mt-14">
+                <div className="flex sm:flex-row flex-col sm:gap-x-8 gap-y-8">
                     <div className="flex flex-col">
                         <div className="border-t border-roooby-gray-300 h-[1px]"></div>
                         <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px] mt-6">Service</span>
                         <h1 className="font-inter font-bold text-[2.5rem] leading-[3rem] tracking-[-0.56px] mt-4 max-w-[34.75rem]">
                             The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers
                         </h1>
-                        <div className="flex flex-row justify-between mt-[7.25rem]">
+                        <div className="flex flex-row justify-between sm:mt-[7.25rem] mt-12">
                             <span className="font-inter font-medium text-base">05 Sep 2024,
                                 <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Maxwell Iskiev</span>
                             </span>
@@ -84,7 +102,7 @@ export default function Blog() {
                         className="text-2xl leading-9 tracking-[-0.33px]"
                     />
                 ))}
-                <div className="flex flex-row container gap-x-8">
+                <div className="flex sm:flex-row flex-col container gap-x-8">
                     <Article
                         label="Marketing"
                         imgSrc="/assets/images/blogImages/marketing-image-1.png"
@@ -94,9 +112,9 @@ export default function Blog() {
                         header="Email marketing best practices: 10 experts share their email tips"
                         date="23 Nov 2023"
                         author="Joshua Nash"
-                        className="text-3xl leading-10 tracking-[-0.44px] h-[5.25rem] max-w-[34.75rem]"
+                        className="text-3xl leading-10 tracking-[-0.44px] max-sm:mb-8 max-w-[34.75rem] h-[5.25rem]"
                     />
-                    <div className="flex flex-col gap-y-12 pt-9 max-w-[34.75rem]">
+                    <div className="flex flex-col sm:gap-y-12 gap-y-8 pt-9 max-w-[34.75rem]">
                         <div className="flex flex-col">
                             <div className="border-t border-roooby-gray-300 h-[1px]"></div>
                             <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4">Access Roooby leads features on your mobile</h1>

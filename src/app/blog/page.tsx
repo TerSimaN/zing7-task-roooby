@@ -117,7 +117,7 @@ export default function Blog() {
                     <div className="flex flex-col sm:gap-y-12 gap-y-8 pt-9 max-w-[34.75rem]">
                         <div className="flex flex-col">
                             <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4">Access Roooby leads features on your mobile</h1>
+                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 pr-24">Access Roooby leads features on your mobile</h1>
                             <div className="flex flex-row justify-between mt-6">
                                 <span className="font-inter font-medium text-base">11 Aug 2023,
                                     <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Joshua Nash</span>
@@ -127,7 +127,7 @@ export default function Blog() {
                         </div>
                         <div className="flex flex-col">
                             <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4">Sales presentations: templates, examples and ideas on how to present like a pro</h1>
+                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 pr-16">Sales presentations: templates, examples and ideas on how to present like a pro</h1>
                             <div className="flex flex-row justify-between mt-6">
                                 <span className="font-inter font-medium text-base">11 Oct 2022,
                                     <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Laura Ryan</span>
@@ -137,7 +137,7 @@ export default function Blog() {
                         </div>
                         <div className="flex flex-col">
                             <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4">How To Deliver a Successful Product Launch</h1>
+                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 pr-24">How To Deliver a Successful Product Launch</h1>
                             <div className="flex flex-row justify-between mt-6">
                                 <span className="font-inter font-medium text-base">30 Jan 2022,
                                     <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Alice Washington</span>

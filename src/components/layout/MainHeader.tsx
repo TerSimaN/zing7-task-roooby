@@ -15,7 +15,7 @@ const links = [
 ]
 
 const MainHeader = () => {
-    const [visible, setVisible] = useState(0);
+    const [visible, setVisible] = useState(-1);
     const [open, setOpen] = useState(false);
 
     return (
@@ -57,7 +57,7 @@ const MainHeader = () => {
                     <ul className={`absolute left-0 top-12 ${open ? `flex` : `hidden`} flex-col items-center max-md:gap-6 bg-roooby-gray-100 z-10 px-6 pt-6 w-full min-h-screen`}>
                         <ul className="flex flex-col gap-y-6 font-inter font-medium text-xl text-center w-full">
                             {links.map((link, i) => (
-                                <li key={link.href + i} onClick={() => setOpen(false)}>
+                                <li key={link.href + i} onClick={() => { setOpen(false); setVisible(i); }}>
                                     <Link href={link.href}>{link.name}</Link>
                                 </li>
                             ))}

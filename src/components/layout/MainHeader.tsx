@@ -30,8 +30,8 @@ const MainHeader = () => {
                 <ul className="sm:flex max-md:hidden gap-12 font-inter font-medium text-sm mt-1">
                     {links.map((link, i) => (
                         <div key={i} className="flex flex-col items-center gap-y-1">
-                            <li onClick={() => setVisible(i)}>
-                                <Link href={link.href}>{link.name}</Link>
+                            <li>
+                                <Link href={link.href} onClick={() => setVisible(i)}>{link.name}</Link>
                             </li>
                             <div className={`${visible === i ? `visible` : `invisible`} border-t-[3px] border-black w-10`}></div>
                         </div>
@@ -57,8 +57,8 @@ const MainHeader = () => {
                     <ul className={`absolute left-0 top-12 ${open ? `flex` : `hidden`} flex-col items-center max-md:gap-6 bg-roooby-gray-100 z-10 px-6 pt-6 w-full min-h-screen`}>
                         <ul className="flex flex-col gap-y-6 font-inter font-medium text-xl text-center w-full">
                             {links.map((link, i) => (
-                                <li key={link.href + i} onClick={() => { setOpen(false); setVisible(i); }}>
-                                    <Link href={link.href}>{link.name}</Link>
+                                <li key={link.href + i}>
+                                    <Link href={link.href} onClick={() => { setOpen(false); setVisible(i); }}>{link.name}</Link>
                                 </li>
                             ))}
                         </ul>

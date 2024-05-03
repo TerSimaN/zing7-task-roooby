@@ -122,7 +122,7 @@ const MainFooter = () => {
                         width={24}
                         height={24}
                     />
-                    <span className="font-inter font-medium text-sm tracking-[0.2px] ml-2 -mr-1">English</span>
+                    <span className="font-inter font-medium text-sm tracking-[0.2px] select-none ml-2 -mr-1">English</span>
                     <svg className="fill-roooby-gray-300" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" clipRule="evenodd" d="M4.94 6L8 9.09042L11.06 6L12 6.95142L8 11L4 6.95142L4.94 6Z" />
                     </svg>

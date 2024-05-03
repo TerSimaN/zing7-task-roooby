@@ -3,22 +3,23 @@ import Image from "next/image";
 import { facebookLogo, linkedinLogo, twitterLogo } from "../../../../public/assets/logos";
 import { insertLinkIcon } from "../../../../public/assets/icons";
 
-export default function BlogDetails() {
+export default function BlogDetails({ searchParams }: { searchParams: { label: string, header: string, date: string, author: string, imgSrc: string } }) {
     return (
         <main>
             <div className="bg-roooby-gray-100 sm:pt-[4.5rem] pt-9">
-                <div className="flex flex-col items-center sm:gap-y-12 gap-y-8 container max-sm:px-4">
+                <div className={`flex flex-col items-center sm:gap-y-12 gap-y-8 container max-sm:px-4 ${searchParams.imgSrc === undefined ? `pb-8` : ``}`}>
                     <div className="flex flex-col max-w-[46.75rem]">
-                        <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">Sales</span>
+                        <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">{searchParams.label}</span>
                         <div className="border-t border-roooby-gray-300 mt-4 h-[1px]"></div>
-                        <h1 className="font-inter font-bold sm:text-5xl text-4xl leading-[3.5rem] tracking-[-0.67px] max-sm:text-center mt-4">The Psychology of Short-Form Content: Why We Love Bite</h1>
-                        <span className="font-inter font-medium text-base max-sm:text-center mt-6">05 Sep 2024, <span className="text-roooby-gray-300">by Joshua Nash</span></span>
+                        <h1 className="font-inter font-bold sm:text-5xl text-4xl leading-[3.5rem] tracking-[-0.67px] max-sm:text-center mt-4">{searchParams.header}</h1>
+                        <span className="font-inter font-medium text-base max-sm:text-center mt-6">{searchParams.date}, <span className="text-roooby-gray-300">by {searchParams.author}</span></span>
                     </div>
                     <Image
-                        src="/assets/images/blogImages/blogDetailsImages/blog-header-image.svg"
+                        src={`${searchParams.imgSrc === undefined ? '/' : `${searchParams.imgSrc}`}`}
                         alt="blog-header-image"
                         width={945}
                         height={511}
+                        className={`${searchParams.imgSrc === undefined ? `hidden` : ``}`}
                     />
                 </div>
             </div>
@@ -58,7 +59,7 @@ export default function BlogDetails() {
                     </div>
                 </div>
                 <Image
-                    src="/assets/images/blogImages/blogDetailsImages/blog-content-image.png"
+                    src="/assets/images/blogImages/blogDetailsImages/blog-content-image.svg"
                     alt="blog-content-image"
                     width={748}
                     height={405}
@@ -146,7 +147,7 @@ export default function BlogDetails() {
                             header="The best cities for sales careers in 2022"
                             date="20 Mar 2023"
                             author="Bill Holloway"
-                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-1.png"
+                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-1.svg"
                             imgAlt="blog-image-1"
                         />
                         <Article
@@ -154,7 +155,7 @@ export default function BlogDetails() {
                             header="What is a sales Yoora and how do you build one?"
                             date="29 Mar 2023"
                             author="Amanda Brooks"
-                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-2.png"
+                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-2.svg"
                             imgAlt="blog-image-2"
                         />
                         <Article
@@ -162,7 +163,7 @@ export default function BlogDetails() {
                             header="10 real estate cold calling scripts to increase"
                             date="27 Dec 2023"
                             author="Roxie Sandoval"
-                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-3.png"
+                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-3.svg"
                             imgAlt="blog-image-3"
                         />
                     </div>

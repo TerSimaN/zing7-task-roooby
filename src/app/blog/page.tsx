@@ -3,6 +3,7 @@
 import Article from "@/components/layout/Article";
 import Cta from "@/components/layout/Cta";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const tabs = [
@@ -16,28 +17,43 @@ const tabs = [
 
 const articles = [
     {
-        label: 'News', imgSrc: '/assets/images/blogImages/news-image-1.png', imgAlt: 'news-image-1',
+        label: 'News', imgSrc: '/assets/images/blogImages/news-image-1.svg', imgAlt: 'news-image-1',
         header: 'Learn from My Mistakes: 7 Digital Course Pitfalls to Skip', date: '29 Jun 2024', author: 'Joshua Nash'
     },
     {
-        label: 'Sales', imgSrc: '/assets/images/blogImages/sales-image-1.png', imgAlt: 'sales-image-1',
+        label: 'Sales', imgSrc: '/assets/images/blogImages/sales-image-1.svg', imgAlt: 'sales-image-1',
         header: 'How To Do Representation in Marketing the Right Way', date: '20 Mar 2022', author: 'Bill Holloway'
     },
     {
-        label: 'Sales', imgSrc: '/assets/images/blogImages/sales-image-2.png', imgAlt: 'sales-image-2',
+        label: 'Sales', imgSrc: '/assets/images/blogImages/sales-image-2.svg', imgAlt: 'sales-image-2',
         header: 'The Psychology of Short-Form Content: Why We Love...', date: '07 Jun 2024', author: 'Stephen Henderson'
     },
     {
-        label: 'Sales', imgSrc: '/assets/images/blogImages/sales-image-3.png', imgAlt: 'sales-image-3',
+        label: 'Sales', imgSrc: '/assets/images/blogImages/sales-image-3.svg', imgAlt: 'sales-image-3',
         header: 'The Challenger Sale model: How to lead the conversation', date: '09 Jan 2024', author: 'Joshua Nash'
     },
     {
-        label: 'Product', imgSrc: '/assets/images/blogImages/product-image-1.png', imgAlt: 'product-image-1',
+        label: 'Product', imgSrc: '/assets/images/blogImages/product-image-1.svg', imgAlt: 'product-image-1',
         header: '3 ways To automate your lead generation process', date: '08 Jul 2024', author: 'Leroy Figueroa'
     },
     {
-        label: 'Product', imgSrc: '/assets/images/blogImages/product-image-2.png', imgAlt: 'product-image-2',
+        label: 'Product', imgSrc: '/assets/images/blogImages/product-image-2.svg', imgAlt: 'product-image-2',
         header: 'Marketplace Monthly Apps Spotlight: Aug 2023', date: '05 Aug 2024', author: 'Joshua Nash'
+    },
+]
+
+const moreArticles = [
+    {
+        label: 'Product', header: 'Access Roooby leads features on your mobile',
+        date: '11 Aug 2023', author: 'Joshua Nash'
+    },
+    {
+        label: 'Sales', header: 'Sales presentations: templates, examples and ideas on how to present like a pro',
+        date: '11 Oct 2022', author: 'Laura Ryan'
+    },
+    {
+        label: 'News', header: 'How To Deliver a Successful Product Launch',
+        date: '30 Jan 2022', author: 'Alice Washington'
     },
 ]
 
@@ -74,7 +90,16 @@ export default function Blog() {
                         <div className="border-t border-roooby-gray-300 h-[1px]"></div>
                         <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px] mt-6">Service</span>
                         <h1 className="font-inter font-bold text-[2.5rem] leading-[3rem] tracking-[-0.56px] mt-4 max-w-[34.75rem]">
-                            The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers
+                            <Link href={{
+                                pathname: '/blog/Service',
+                                query: {
+                                    label: 'Service',
+                                    header: 'The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers',
+                                    date: '05 Sep 2024',
+                                    author: 'Maxwell Iskiev',
+                                    imgSrc: '/assets/images/blogImages/service-image-1.svg'
+                                }
+                            }}>The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers</Link>
                         </h1>
                         <div className="flex flex-row justify-between sm:mt-[7.25rem] mt-12">
                             <span className="font-inter font-medium text-base">05 Sep 2024,
@@ -84,7 +109,7 @@ export default function Blog() {
                         <div className="border-t border-roooby-gray-300 h-[1px] mt-6"></div>
                     </div>
                     <Image
-                        src="/assets/images/blogImages/service-image-1.png"
+                        src="/assets/images/blogImages/service-image-1.svg"
                         alt="service-image-1"
                         width={555}
                         height={370}
@@ -105,7 +130,7 @@ export default function Blog() {
                 <div className="flex sm:flex-row flex-col container gap-x-8">
                     <Article
                         label="Marketing"
-                        imgSrc="/assets/images/blogImages/marketing-image-1.png"
+                        imgSrc="/assets/images/blogImages/marketing-image-1.svg"
                         imgAlt="marketing-image-1"
                         imgWidth="555"
                         imgHeight="370"
@@ -115,41 +140,33 @@ export default function Blog() {
                         className="text-3xl leading-10 tracking-[-0.44px] max-sm:mb-8 max-w-[34.75rem] h-[5.25rem]"
                     />
                     <div className="flex flex-col sm:gap-y-12 gap-y-8 pt-9 max-w-[34.75rem]">
-                        <div className="flex flex-col">
-                            <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 pr-24">Access Roooby leads features on your mobile</h1>
-                            <div className="flex flex-row justify-between mt-6">
-                                <span className="font-inter font-medium text-base">11 Aug 2023,
-                                    <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Joshua Nash</span>
-                                </span>
-                                <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">Product</span>
+                        {moreArticles.map((article, i) => (
+                            <div key={i} className="flex flex-col">
+                                <div className="border-t border-roooby-gray-300 h-[1px]"></div>
+                                <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 sm:pr-16">
+                                    <Link href={{
+                                        pathname: `/blog/${article.label}`,
+                                        query: {
+                                            label: `${article.label}`,
+                                            header: `${article.header}`,
+                                            date: `${article.date}`,
+                                            author: `${article.author}`
+                                        }
+                                    }}>{article.header}</Link>
+                                </h1>
+                                <div className="flex flex-row justify-between mt-6">
+                                    <span className="font-inter font-medium text-base">{article.date},
+                                        <span className="font-inter font-medium text-roooby-gray-300 text-base"> by {article.author}</span>
+                                    </span>
+                                    <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">{article.label}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex flex-col">
-                            <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 pr-16">Sales presentations: templates, examples and ideas on how to present like a pro</h1>
-                            <div className="flex flex-row justify-between mt-6">
-                                <span className="font-inter font-medium text-base">11 Oct 2022,
-                                    <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Laura Ryan</span>
-                                </span>
-                                <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">Sales</span>
-                            </div>
-                        </div>
-                        <div className="flex flex-col">
-                            <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                            <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 pr-24">How To Deliver a Successful Product Launch</h1>
-                            <div className="flex flex-row justify-between mt-6">
-                                <span className="font-inter font-medium text-base">30 Jan 2022,
-                                    <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Alice Washington</span>
-                                </span>
-                                <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">News</span>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
                 <Article
                     label="Service"
-                    imgSrc="/assets/images/blogImages/service-image-2.png"
+                    imgSrc="/assets/images/blogImages/service-image-2.svg"
                     imgAlt="service-image-2"
                     header="Sales Funnels: Definition, Process, Stages and Examples"
                     date="01 Dec 2022"
@@ -158,7 +175,7 @@ export default function Blog() {
                 />
                 <Article
                     label="Sales"
-                    imgSrc="/assets/images/blogImages/sales-image-4.png"
+                    imgSrc="/assets/images/blogImages/sales-image-4.svg"
                     imgAlt="sales-image-4"
                     header="What is a sales and how do you build one?"
                     date="29 Mar 2022"
@@ -167,7 +184,7 @@ export default function Blog() {
                 />
                 <Article
                     label="Service"
-                    imgSrc="/assets/images/blogImages/service-image-3.png"
+                    imgSrc="/assets/images/blogImages/service-image-3.svg"
                     imgAlt="service-image-3"
                     header="10 real estate cold calling scripts to increase lead "
                     date="27 Dec 2022"

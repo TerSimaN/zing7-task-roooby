@@ -250,7 +250,7 @@ export default function Home() {
           <div className="flex sm:flex-row flex-col gap-x-7 max-sm:gap-y-14 max-sm:px-4 sm:mt-[4.5rem] mt-10">
             <Article
               label="Service"
-              imgSrc={deliverImage}
+              imgSrc="/assets/images/deliver-image.svg"
               imgAlt="deliver image"
               imgWidth="555"
               header="How To Deliver a Successful Product Launch"
@@ -260,7 +260,7 @@ export default function Home() {
             />
             <Article
               label="Service"
-              imgSrc={employeeImage}
+              imgSrc="/assets/images/employee-image.svg"
               imgAlt="employee image"
               imgWidth="555"
               header="What Makes an Authentic Employee Profile, and Why Does It Matter?"

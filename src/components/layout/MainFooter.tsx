@@ -122,9 +122,12 @@ const MainFooter = () => {
                         width={24}
                         height={24}
                     />
-                    <span className="font-inter font-medium text-sm tracking-[0.2px] select-none ml-2 -mr-1">English</span>
-                    <svg className="fill-roooby-gray-300" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M4.94 6L8 9.09042L11.06 6L12 6.95142L8 11L4 6.95142L4.94 6Z" />
+                    <select className="bg-transparent font-inter font-medium text-sm tracking-[0.2px] select-none appearance-none ml-2 -mr-2 w-full" name="lang">
+                        <option value={'en'}>English</option>
+                        <option value={'bg'}>Bulgarian</option>
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="fill-roooby-gray-300 w-6 h-4">
+                        <path fillRule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
                     </svg>
                 </div>
             </div>

@@ -76,7 +76,7 @@ export default function Home() {
           <div className="flex flex-col gap-y-3 sm:mt-16 mt-8 max-w-[28.5rem]">
             <form>
               <div className="flex sm:flex-row flex-col justify-between items-center sm:bg-white sm:border sm:border-roooby-gray-200 sm:rounded-xl pr-2">
-                <input className="max-sm:bg-white sm:border max-sm:border-roooby-gray-200 max-sm:rounded-xl sm:rounded-l-lg font-inter font-medium text-lg tracking-[-0.25px] placeholder:text-roooby-gray-300 focus:outline-none max-sm:pl-4 sm:ml-6 w-[19rem] h-[4.5rem]" placeholder="Enter your email" type="email" name="email" />
+                <input className="max-sm:bg-white max-sm:border max-sm:border-roooby-gray-200 max-sm:rounded-xl sm:rounded-l-lg font-inter font-medium text-lg tracking-[-0.25px] placeholder:text-roooby-gray-300 focus:outline-none max-sm:pl-4 sm:ml-6 w-[19rem] h-[4.5rem]" placeholder="Enter your email" type="email" name="email" />
                 <button className="bg-roooby-blue-dark rounded-lg font-inter font-bold text-white text-lg tracking-[-0.25px] max-sm:mt-2 sm:w-[8.75rem] max-sm:w-[19rem] h-14" type="submit">Try For Free</button>
               </div>
             </form>

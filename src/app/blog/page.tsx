@@ -2,9 +2,12 @@
 
 import Article from "@/components/layout/Article";
 import Cta from "@/components/layout/Cta";
+import { getPhotos } from "@/lib/actions/photos";
+import { getPosts } from "@/lib/actions/posts";
+import { getUsers } from "@/lib/actions/users";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const tabs = [
     { name: 'All Articles' },
@@ -59,6 +62,21 @@ const moreArticles = [
 
 export default function Blog() {
     const [selected, setSelected] = useState(0);
+    const [posts, setPosts] = useState([] as JsonPlaceholder.Post[]);
+    const [photos, setPhotos] = useState([] as JsonPlaceholder.Photo[]);
+    const [users, setUsers] = useState([] as  JsonPlaceholder.User[]);
+
+    useEffect(() => {
+        getPosts().then((data) => {
+            setPosts(data);
+        });
+        getPhotos().then((data) => {
+            setPhotos(data);
+        });
+        getUsers().then((data) => {
+            setUsers(data);
+        });
+    }, []);
 
     return (
         <main>
@@ -115,6 +133,27 @@ export default function Blog() {
                         height={370}
                     />
                 </div>
+                {posts.map((post, index) => {
+                    const author = users.find((user) => user.id == post.userId);
+                    const photo = photos?.[index];
+
+                    return (
+                        <Article
+                            key={post.id}
+                            postId={post.id}
+                            label="Post"
+                            imgSrc={photo?.thumbnailUrl}
+                            imgAlt={photo?.title}
+                            imgWidth="360"
+                            imgHeight="360"
+                            header={post.title}
+                            text={post.body}
+                            date="Date"
+                            author={author?.name ?? 'Annonymous'}
+                            className="text-2xl leading-9 tracking-[-0.33px]"
+                        />
+                    )
+                })}
                 {articles.map((article, i) => (
                     <Article
                         key={i}

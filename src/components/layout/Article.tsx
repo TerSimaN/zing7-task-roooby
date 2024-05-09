@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
 
-const Article = ({ label = '', imgSrc = '', imgAlt = '', imgWidth = '', imgHeight = '', header = '', date = '', author = '', className = '' }) => {
+const Article = ({ postId = 0, label = '', imgSrc = '', imgAlt = '', imgWidth = '', imgHeight = '', header = '', text = '', date = '', author = '', className = '' }) => {
   let classArr = className.split(' ');
   let maxW: string = '';
   for (const el of classArr) {
@@ -24,10 +24,13 @@ const Article = ({ label = '', imgSrc = '', imgAlt = '', imgWidth = '', imgHeigh
       />
       <h1 className={`font-inter font-bold ${(className !== '') ? `${className}` : `text-2xl leading-[34px] tracking-[-0.33px]`} mt-4 max-w-[34.75rem]`}>
         <Link href={{
-          pathname: `/blog/${label}`,
-          query: { label: `${label}`, header: `${header}`, date: `${date}`, author: `${author}`, imgSrc: `${imgSrc}` }
+          pathname: `/blog/${(postId !== 0) ? postId : label}`,
+          query: `${postId !== 0 ? '' : { label: label, imgSrc: imgSrc, imgAlt: imgAlt, header: header, date: date, author: author }}`
         }}>{header}</Link>
       </h1>
+      <p className="font-inter font-normal text-md leading-[34px] tracking-[-0.33px]">
+        {text}
+      </p>
       <span className="font-inter font-medium text-base mt-6">{date}, <span className="font-inter font-medium text-roooby-gray-300 text-base">by {author}</span></span>
     </article>
   )

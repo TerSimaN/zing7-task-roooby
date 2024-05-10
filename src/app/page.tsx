@@ -104,7 +104,7 @@ export default function Home() {
             {cards.map((card, i) => (
               <div
                 key={i}
-                className={`flex flex-col ${isSelected === i ? `bg-roooby-yellow -translate-y-3` : `bg-roooby-blue-pale`} rounded-lg px-8 py-16`}
+                className={`flex flex-col ${isSelected === i ? `bg-roooby-yellow -translate-y-3` : `bg-roooby-blue-pale`} rounded-lg px-8 py-16 cursor-pointer`}
                 onClick={() => setSelected(i)}>
                 <div className="h-[4.5rem]">
                   {getIcon(card.iconName, `${isSelected === i ? 'black' : 'white'}`)}

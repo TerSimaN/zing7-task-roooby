@@ -54,15 +54,15 @@ const MainHeader = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`${open ? `` : `hidden`} mr-6 w-9 h-9`} onClick={() => setOpen(false)}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
-                    <ul className={`absolute left-0 top-12 ${open ? `flex` : `hidden`} flex-col items-center max-md:gap-6 bg-roooby-gray-100 z-10 px-6 pt-6 w-full min-h-screen`}>
-                        <ul className="flex flex-col sm:gap-y-3 gap-y-6 font-inter font-medium text-xl text-center w-full">
+                    <ul className={`absolute right-0 origin-top-right z-10 ${open ? `flex` : `hidden`} flex-col items-center max-md:gap-6 bg-roooby-gray-100 shadow-xl px-6 py-4 mt-9 w-full min-h-fit`}>
+                        <ul className="flex flex-col sm:gap-y-3 gap-y-4 font-inter font-medium text-xl text-center w-full">
                             {links.map((link, i) => (
                                 <li key={link.href + i}>
                                     <Link href={link.href} onClick={() => { setOpen(false); setVisible(i); }}>{link.name}</Link>
                                 </li>
                             ))}
                         </ul>
-                        <div className="flex flex-col sm:flex-row sm:gap-x-6 gap-y-6">
+                        <div className="flex flex-col sm:flex-row sm:gap-x-6 gap-y-4">
                             <Button
                                 className="font-inter font-bold text-lg tracking-[-0.19px] bg-white border rounded border-roooby-gray-200 w-40 h-12"
                                 text="Log In"

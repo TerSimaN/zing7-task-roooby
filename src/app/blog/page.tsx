@@ -64,7 +64,7 @@ export default function Blog() {
     const [selected, setSelected] = useState(0);
     const [posts, setPosts] = useState([] as JsonPlaceholder.Post[]);
     const [photos, setPhotos] = useState([] as JsonPlaceholder.Photo[]);
-    const [users, setUsers] = useState([] as  JsonPlaceholder.User[]);
+    const [users, setUsers] = useState([] as JsonPlaceholder.User[]);
 
     useEffect(() => {
         getPosts().then((data) => {
@@ -85,20 +85,24 @@ export default function Blog() {
                     <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-lg:text-center max-w-[40.75rem]">
                         News and insights <span className="font-inter font-bold text-roooby-gray-300 text-[4rem] leading-[4.75rem] tracking-[-0.89px]">from our experts</span>
                     </h1>
-                    <div className="flex flex-col sm:mt-[6.25rem] mt-12 max-w-[36.25rem]">
-                        <ul className="flex flex-row max-sm:flex-wrap sm:justify-between items-center max-sm:gap-x-12 max-sm:gap-y-4">
+                    <div className="max-md:hidden">
+                        <ul className="flex flex-row max-sm:flex-wrap items-center sm:justify-between max-sm:gap-x-12 max-sm:gap-y-4 sm:mt-[6.25rem] mt-12 max-w-[36.25rem]">
                             {tabs.map((tab, i) => (
-                                <div key={tab.name + i} className="flex flex-col items-center sm:gap-y-7 gap-y-3">
-                                    <li key={i}
-                                        className={`font-inter font-medium ${selected === i ? `` : `text-roooby-gray-400`} text-lg select-none`}
-                                        onClick={() => setSelected(i)}
-                                    >
-                                        {tab.name}
-                                    </li>
-                                    <div className={`${selected === i ? `visible` : `invisible`} border-t-[3px] border-roooby-green-400 w-[86px] h-[3px]`}></div>
-                                </div>
+                                <li key={i}
+                                    className={`font-inter font-medium ${selected === i ? `border-b-[3px] border-roooby-green-400` : `border-b-[3px] border-transparent text-roooby-gray-400`} text-lg pb-6 cursor-pointer select-none`}
+                                    onClick={() => setSelected(i)}
+                                >
+                                    {tab.name}
+                                </li>
                             ))}
                         </ul>
+                    </div>
+                    <div className="md:hidden mt-12 mb-6">
+                        <select className="rounded-md bg-white font-inter font-medium text-lg select-none pl-3 pr-10 py-2 w-full" name="lang">
+                            {tabs.map((tab, i) => (
+                                <option key={i} value={tab.name}>{tab.name}</option>
+                            ))}
+                        </select>
                     </div>
                 </div>
             </div>

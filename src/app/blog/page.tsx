@@ -102,7 +102,7 @@ export default function Blog() {
                     </div>
                 </div>
             </div>
-            <div className="flex sm:flex-row flex-col flex-wrap container gap-x-3 sm:gap-y-[7.5rem] gap-y-14 max-sm:px-6 sm:pb-44 pb-20 sm:mt-[7.5rem] mt-14">
+            <div className="flex sm:flex-row flex-col flex-wrap container gap-x-7 sm:gap-y-[7.5rem] gap-y-14 max-sm:px-6 sm:pb-44 pb-20 sm:mt-[7.5rem] mt-14">
                 <div className="flex sm:flex-row flex-col sm:gap-x-8 gap-y-8">
                     <div className="flex flex-col">
                         <div className="border-t border-roooby-gray-300 h-[1px]"></div>

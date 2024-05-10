@@ -9,9 +9,9 @@ const logos = [
     { imgSrc: amazonLogo, imgAlt: 'Amazon logo' },
 ]
 
-const Clients = ({ className = '' }) => {
+const Clients = () => {
     return (
-        <div className={`flex sm:flex-row flex-col items-center justify-between max-sm:gap-y-12 ${(className !== '') ? `${className}` : `sm:mt-32 mt-16 mb-[5.25rem]`}`}>
+        <div className="flex sm:flex-row flex-col items-center justify-between max-sm:gap-y-12 sm:mt-32 mt-16 mb-[5.25rem]">
             <span className="font-inter font-medium text-base tracking-[-0.22px]">Trusted by 1,000+ customers</span>
             {logos.map((logo, i) => (
                 <Image

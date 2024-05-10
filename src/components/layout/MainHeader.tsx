@@ -20,14 +20,14 @@ const MainHeader = () => {
 
     return (
         <header className="bg-roooby-gray-100 py-6">
-            <div className="max-md:relative flex flex-row items-center max-md:justify-between container">
-                <Link href={'/'} className="max-md:ml-6 sm:mr-[6.25rem]" onClick={() => { setVisible(-1); setOpen(false); }}>
+            <div className="max-md:relative flex flex-row items-center max-xl:justify-between container">
+                <Link href={'/'} className="max-xl:ml-6 lg:mr-[6.25rem]" onClick={() => { setVisible(-1); setOpen(false); }}>
                     <Image
                         src={rooobyLogo}
                         alt="Roooby Logo"
                     />
                 </Link>
-                <ul className="sm:flex max-md:hidden gap-12 font-inter font-medium text-sm mt-1">
+                <ul className="md:flex max-md:hidden lg:gap-12 gap-6 font-inter font-medium text-sm mt-1">
                     {links.map((link, i) => (
                         <div key={i} className="flex flex-col items-center gap-y-1">
                             <li>
@@ -37,7 +37,7 @@ const MainHeader = () => {
                         </div>
                     ))}
                 </ul>
-                <div className="sm:flex max-md:hidden sm:flex-row items-center gap-5 ml-auto">
+                <div className="md:flex max-md:hidden sm:flex-row items-center lg:gap-5 gap-3 xl:ml-auto max-xl:mr-6">
                     <Button
                         className="font-inter font-bold text-xs tracking-[-0.19px] bg-white border rounded border-roooby-gray-200 w-[4.75rem] h-8"
                         text="Log In"
@@ -55,21 +55,23 @@ const MainHeader = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                     <ul className={`absolute left-0 top-12 ${open ? `flex` : `hidden`} flex-col items-center max-md:gap-6 bg-roooby-gray-100 z-10 px-6 pt-6 w-full min-h-screen`}>
-                        <ul className="flex flex-col gap-y-6 font-inter font-medium text-xl text-center w-full">
+                        <ul className="flex flex-col sm:gap-y-3 gap-y-6 font-inter font-medium text-xl text-center w-full">
                             {links.map((link, i) => (
                                 <li key={link.href + i}>
                                     <Link href={link.href} onClick={() => { setOpen(false); setVisible(i); }}>{link.name}</Link>
                                 </li>
                             ))}
                         </ul>
-                        <Button
-                            className="font-inter font-bold text-lg tracking-[-0.19px] bg-white border rounded border-roooby-gray-200 w-40 h-12"
-                            text="Log In"
-                        />
-                        <Button
-                            className="font-inter font-bold text-white text-lg tracking-[-0.19px] bg-roooby-blue-dark rounded w-40 h-12"
-                            text="Try For Free"
-                        />
+                        <div className="flex flex-col sm:flex-row sm:gap-x-6 gap-y-6">
+                            <Button
+                                className="font-inter font-bold text-lg tracking-[-0.19px] bg-white border rounded border-roooby-gray-200 w-40 h-12"
+                                text="Log In"
+                            />
+                            <Button
+                                className="font-inter font-bold text-white text-lg tracking-[-0.19px] bg-roooby-blue-dark rounded w-40 h-12"
+                                text="Try For Free"
+                            />
+                        </div>
                     </ul>
                 </div>
             </div>

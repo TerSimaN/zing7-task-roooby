@@ -80,10 +80,10 @@ export default function Blog() {
 
     return (
         <main>
-            <div className="bg-roooby-gray-100 sm:pt-[4.5rem] pt-9">
-                <div className="flex flex-col container max-sm:px-4">
-                    <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-sm:text-center max-w-[40.75rem]">
-                        News and insights <span className="font-inter font-bold text-roooby-gray-300 text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-w-[40.75rem]">from our experts</span>
+            <div className="bg-roooby-gray-100 max-sm:px-4 sm:pt-[4.5rem] max-lg:px-4 pt-9">
+                <div className="flex flex-col container">
+                    <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-lg:text-center max-w-[40.75rem]">
+                        News and insights <span className="font-inter font-bold text-roooby-gray-300 text-[4rem] leading-[4.75rem] tracking-[-0.89px]">from our experts</span>
                     </h1>
                     <div className="flex flex-col sm:mt-[6.25rem] mt-12 max-w-[36.25rem]">
                         <ul className="flex flex-row max-sm:flex-wrap sm:justify-between items-center max-sm:gap-x-12 max-sm:gap-y-4">

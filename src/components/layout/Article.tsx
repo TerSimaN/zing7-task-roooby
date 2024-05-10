@@ -25,7 +25,7 @@ const Article = ({ postId = 0, label = '', imgSrc = '', imgAlt = '', imgWidth = 
       <h1 className={`font-inter font-bold ${(className !== '') ? `${className}` : `text-2xl leading-[34px] tracking-[-0.33px]`} mt-4 max-w-[34.75rem]`}>
         <Link href={{
           pathname: `/blog/${(postId !== 0) ? postId : label}`,
-          query: `${postId !== 0 ? '' : { label: label, imgSrc: imgSrc, imgAlt: imgAlt, header: header, date: date, author: author }}`
+          query: `${postId !== 0 ? '' : `label=${label}&header=${header}&date=${date}&author=${author}&imgSrc=${imgSrc}&imgAlt=${imgAlt}`}`
         }}>{header}</Link>
       </h1>
       <p className="font-inter font-normal text-md leading-[34px] tracking-[-0.33px]">

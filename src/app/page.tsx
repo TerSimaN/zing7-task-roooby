@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { deliverImage, employeeImage, fosterOval, gibbsOval, headerImage, phelpsOval, rossOval, salesImage, serviceImage, wilkinsOval } from "../../public/assets/images";
+import { fosterOval, gibbsOval, headerImage, phelpsOval, rossOval, salesImage, serviceImage, wilkinsOval } from "../../public/assets/images";
 import { asanaLogo, chartsLogo, gearLogo, googleMeetLogo, hubSpotLogo, intercomLogo, microsoftTeamsLogo, slackLogo, zendeskLogo, zoomLogo } from "../../public/assets/logos";
 import { quotationMarkIcon } from "../../public/assets/icons";
 import Cta from "@/components/layout/Cta";

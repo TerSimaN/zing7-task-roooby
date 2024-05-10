@@ -13,11 +13,11 @@ type Params = {
     },
     searchParams: {
         label: string,
-        imgSrc: string,
-        imgAlt: string,
         header: string,
         date: string,
-        author: string
+        author: string,
+        imgSrc: string,
+        imgAlt: string
     }
 }
 
@@ -30,7 +30,7 @@ export default async function BlogDetails(props: Params) {
     return (
         <main>
             <div className="bg-roooby-gray-100 sm:pt-[4.5rem] pt-9">
-                <div className={`flex flex-col items-center sm:gap-y-12 gap-y-8 container max-sm:px-4 ${photo?.url === undefined ? `pb-8` : ``}`}>
+                <div className='flex flex-col items-center sm:gap-y-12 gap-y-8 container max-sm:px-4'>
                     <div className="flex flex-col max-w-[46.75rem]">
                         <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">{props.searchParams.label ?? 'Post'}</span>
                         <div className="border-t border-roooby-gray-300 mt-4 h-[1px]"></div>
@@ -38,11 +38,11 @@ export default async function BlogDetails(props: Params) {
                         <span className="font-inter font-medium text-base max-sm:text-center mt-6">{props.searchParams.date ?? 'Date'}, <span className="text-roooby-gray-300">by {author?.name ?? props.searchParams.author}</span></span>
                     </div>
                     <Image
-                        src={`${photo?.url ?? props.searchParams.imgSrc}`}
+                        src={`${photo?.url ?? props.searchParams.imgSrc ?? '/'}`}
                         alt={`${photo?.title ?? props.searchParams.imgAlt}`}
                         width={`${photo?.url !== undefined ? 600 : 945}`}
                         height={`${photo?.url !== undefined  ? 600 : 511}`}
-                        className={`${photo?.url === undefined ? `hidden` : ``}`}
+                        className={`${props.searchParams.imgSrc === undefined ? `hidden` : ``}`}
                     />
                 </div>
             </div>

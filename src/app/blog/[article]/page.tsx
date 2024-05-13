@@ -6,6 +6,7 @@ import { getPostById } from "@/lib/actions/posts";
 import { getPhotoById } from "@/lib/actions/photos";
 import { getUserByPostId } from "@/lib/actions/users";
 import { getCommentByPostId } from "@/lib/actions/comments";
+import { date } from "@/config/constants";
 
 type Params = {
     params: {
@@ -35,7 +36,7 @@ export default async function BlogDetails(props: Params) {
                         <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">{props.searchParams.label ?? 'Post'}</span>
                         <div className="border-t border-roooby-gray-300 mt-4 h-[1px]"></div>
                         <h1 className="font-inter font-bold sm:text-5xl text-4xl leading-[3.5rem] tracking-[-0.67px] max-sm:text-center mt-4">{post?.title ?? props.searchParams.header}</h1>
-                        <span className="font-inter font-medium text-base max-sm:text-center mt-6">{props.searchParams.date ?? 'Date'}, <span className="text-roooby-gray-300">by {author?.name ?? props.searchParams.author}</span></span>
+                        <span className="font-inter font-medium text-base max-sm:text-center mt-6">{props.searchParams.date ?? date}, <span className="text-roooby-gray-300">by {author?.name ?? props.searchParams.author}</span></span>
                     </div>
                     <Image
                         src={`${photo?.url ?? props.searchParams.imgSrc ?? '/'}`}

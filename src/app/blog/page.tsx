@@ -2,6 +2,7 @@
 
 import Article from "@/components/layout/Article";
 import Cta from "@/components/layout/Cta";
+import { date } from "@/config/constants";
 import { getPhotos } from "@/lib/actions/photos";
 import { getPosts } from "@/lib/actions/posts";
 import { getUsers } from "@/lib/actions/users";
@@ -119,7 +120,8 @@ export default function Blog() {
                                     header: 'The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers',
                                     date: '05 Sep 2024',
                                     author: 'Maxwell Iskiev',
-                                    imgSrc: '/assets/images/blogImages/service-image-1.svg'
+                                    imgSrc: '/assets/images/blogImages/service-image-1.svg',
+                                    imgAlt: 'service-image-1'
                                 }
                             }}>The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers</Link>
                         </h1>
@@ -152,7 +154,7 @@ export default function Blog() {
                             imgHeight="360"
                             header={post.title}
                             text={post.body}
-                            date="Date"
+                            date={date}
                             author={author?.name ?? 'Annonymous'}
                             className="text-2xl leading-9 tracking-[-0.33px]"
                         />

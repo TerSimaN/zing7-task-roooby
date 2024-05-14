@@ -1,9 +1,14 @@
+'use client';
+
 import Cta from "@/components/layout/Cta";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { checkmarkIcon, iconAdd } from "../../../public/assets/icons";
+import { useState } from "react";
 
 export default function Pricing() {
+    const [open, setOpen] = useState(-1);
+
     const cards = [
         {
             name: 'Starter',
@@ -174,24 +179,21 @@ export default function Pricing() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col container max-sm:px-4 sm:my-[9.25rem] my-[4.5rem]">
+            <div className="flex flex-col container max-sm:px-4 sm:my-[7.5rem] my-[4.5rem]">
                 <h1 className="font-inter font-bold text-[4rem] leading-[4.5rem] tracking-[-0.89px] max-sm:text-center max-w-[37.25rem]">Frequently asked questions</h1>
-                <div className="flex flex-col ml-auto mt-5 max-w-[59.185rem]">
+                <div className="flex flex-col gap-y-12 ml-auto mt-[4.5rem] max-w-[59.185rem]">
                     {accordions.map((accordion, i) => (
-                        <details key={i}>
-                            <summary className="select-none mt-[3.25rem]">
-                                <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                                <div className="flex items-center mt-[3.25rem]">
-                                    <h1 className="font-inter font-medium text-[2rem] leading-10 tracking-[-0.44px]">{accordion.header}</h1>
-                                    <Image
-                                        src={iconAdd}
-                                        alt="icon add"
-                                        className="ml-auto"
-                                    />
-                                </div>
-                            </summary>
-                            <p className="font-inter font-normal text-lg leading-7 mt-9 w-full max-w-[53.75rem]">{accordion.info}</p>
-                        </details>
+                        <div key={i} className="border-t border-roooby-gray-300 pt-[3.25rem]">
+                            <button className="flex items-start justify-between w-full" onClick={() => setOpen(i)}>
+                                <h1 className="font-inter font-medium text-[2rem] leading-10 tracking-[-0.44px]">{accordion.header}</h1>
+                                <Image
+                                    src={iconAdd}
+                                    alt="icon add"
+                                    className="ml-auto"
+                                />
+                            </button>
+                            <p className={`${open === i ? `` : `hidden`} font-inter font-normal text-lg leading-7 mt-9 w-full max-w-[53.75rem]`}>{accordion.info}</p>
+                        </div>
                     ))}
                 </div>
             </div>

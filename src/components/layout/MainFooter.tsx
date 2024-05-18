@@ -55,8 +55,8 @@ const sections = [
 
 const MainFooter = () => {
     return (
-        <footer className="sm:mt-[9.25rem] mt-[4.75rem]">
-            <div className="flex sm:flex-row flex-col sm:justify-between max-md:items-center container">
+        <footer className="sm:px-12 xl:px-0 lg:mt-[9.25rem] mt-[4.75rem]">
+            <div className="flex lg:flex-row flex-col sm:justify-between max-sm:items-center gap-y-8 container">
                 <div className="flex flex-col max-sm:items-center">
                     <Link href={'/'}>
                         <Image
@@ -69,7 +69,7 @@ const MainFooter = () => {
                         <br />
                         Our team created a fully integrated sales and marketing solution for SMBs
                     </p>
-                    <div className="flex flex-row sm:gap-4 justify-between mt-6 w-[6.5rem] h-6">
+                    <div className="flex flex-row sm:gap-4 justify-between lg:mt-6 mt-4 w-[6.5rem] h-6">
                         <Image
                             src={twitterLogo}
                             alt="Twitter"
@@ -105,30 +105,31 @@ const MainFooter = () => {
                     ))}
                 </div>
             </div>
-            <div className="border-t border-roooby-gray-300 opacity-25 sm:mt-[6.25rem] mt-12 mx-auto w-full max-w-[85rem] h-[1px]"></div>
-            <div className="flex sm:flex-row flex-col max-sm:gap-y-6 items-center justify-between container mt-10 mb-10">
-                <span className="font-inter font-normal text-roooby-gray-500 text-sm tracking-[0.2px]">© Copyright 2024</span>
-                <ul className="flex sm:flex-row flex-col max-sm:gap-y-3 items-center justify-between font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
-                    {links.map((link, i) => (
-                        <li key={i}>
-                            <Link href={link.href}>{link.name}</Link>
-                        </li>
-                    ))}
-                </ul>
-                <div className="flex flex-row items-center">
-                    <Image
-                        src={languageIcon}
-                        alt="Language Icon"
-                        width={24}
-                        height={24}
-                    />
-                    <select className="bg-transparent font-inter font-medium text-sm tracking-[0.2px] select-none appearance-none ml-2 -mr-2 w-full" name="lang">
-                        <option value={'en'}>English</option>
-                        <option value={'bg'}>Bulgarian</option>
-                    </select>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="fill-roooby-gray-300 w-6 h-4">
-                        <path fillRule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
-                    </svg>
+            <div className="border-t border-roooby-gray-300 border-opacity-25 sm:px-8 xl:px-0 pt-10 sm:mt-16 lg:mt-[6.25rem] mt-12 mb-10 mx-auto w-full max-w-[85rem]">
+                <div className="flex md:flex-row flex-col gap-y-6 items-center justify-between container">
+                    <span className="font-inter font-normal text-roooby-gray-500 text-sm tracking-[0.2px]">© Copyright 2024</span>
+                    <ul className="flex md:flex-row flex-col gap-y-3 items-center lg:justify-between justify-around font-inter font-normal text-sm tracking-[0.2px] w-[23rem]">
+                        {links.map((link, i) => (
+                            <li key={i}>
+                                <Link href={link.href}>{link.name}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="flex flex-row items-center">
+                        <Image
+                            src={languageIcon}
+                            alt="Language Icon"
+                            width={24}
+                            height={24}
+                        />
+                        <select className="bg-transparent font-inter font-medium text-sm tracking-[0.2px] select-none appearance-none ml-2 -mr-2 w-full" name="lang">
+                            <option value={'en'}>English</option>
+                            <option value={'bg'}>Bulgarian</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="fill-roooby-gray-300 w-6 h-4">
+                            <path fillRule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </footer>

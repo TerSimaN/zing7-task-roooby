@@ -52,7 +52,7 @@ const MainHeader = () => {
                     </svg>
                 </button>
                 <div className={`sm:hidden${open ? `` : ` hidden`}`}>
-                    <div className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-roooby-gray-100 px-6 py-6 sm:max-w-sm`}>
+                    <div className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-roooby-gray-100 px-6 py-6 max-w-sm`}>
                         <div className="flex items-center justify-between">
                             <Link href={'/'} onClick={() => { setOpen(false); setSelected(-1); }}>
                                 <Image

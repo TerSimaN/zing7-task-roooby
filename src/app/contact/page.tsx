@@ -1,4 +1,4 @@
-import Clients from "@/components/layout/Clients";
+import Clients from "@/components/sections/Clients";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 

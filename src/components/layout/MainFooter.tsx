@@ -90,7 +90,7 @@ const MainFooter = () => {
                         />
                     </div>
                 </div>
-                <div className="flex sm:flex-row flex-col sm:items-start items-center justify-between w-full max-w-[768px]">
+                <div className="flex sm:flex-row flex-col sm:items-start items-center justify-between lg:max-xl:justify-around w-full max-w-[768px]">
                     {sections.map((section) => (
                         <div key={section.name} className="flex flex-col sm:gap-y-3 max-sm:mt-6">
                             <h2 className="font-inter font-bold text-base max-sm:text-center">{section.name}</h2>

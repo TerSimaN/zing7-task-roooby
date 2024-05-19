@@ -140,7 +140,7 @@ export default function Home() {
         </div>
       </div>
       <Logos />
-      <div className="flex flex-col container sm:gap-y-[15rem] gap-y-[7.5rem] mx-auto sm:mt-[7.5rem] mt-16 max-w-[71.25rem]">
+      <div className="flex flex-col container lg:gap-y-[15rem] gap-y-[7.5rem] sm:px-10 md:px-12 xl:px-0 px-2 mx-auto lg:mt-[7.5rem] mt-16">
         <Articles />
         <Stats />
       </div>

@@ -13,8 +13,9 @@ const Article = ({ postId = 0, label = '', imgSrc = '', imgAlt = '', imgWidth = 
 
   return (
     <article className={`flex flex-col ${((className !== '') && (maxW !== '')) ? `${maxW}` : `max-w-[22.5rem]`}`}>
-      <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px]">{label}</span>
-      <div className="border-t border-roooby-gray-300 mt-4 h-[1px]"></div>
+      <span className="border-b border-roooby-gray-300 font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px] pb-4">
+        {label}
+      </span>
       <Image
         src={imgSrc}
         alt={imgAlt}

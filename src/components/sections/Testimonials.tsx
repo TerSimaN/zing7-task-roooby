@@ -32,9 +32,9 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <div className="bg-roooby-gray-100 sm:px-14 xl:px-0 px-4 sm:mt-[11.25rem] mt-20">
-            <div className="flex flex-col max-sm:items-center container sm:py-16 lg:py-[7.5rem] py-8">
-                <div className="flex sm:flex-row flex-col justify-between sm:items-end items-center max-sm:items-center">
+        <div className="bg-roooby-gray-100 sm:px-10 md:px-14 xl:px-0 px-4 lg:mt-32 xl:mt-[11.25rem] mt-20">
+            <div className="flex flex-col max-sm:items-center container sm:py-16 lg:py-20 xl:py-[7.5rem] py-8">
+                <div className="flex md:flex-row flex-col lg:gap-y-0 sm:gap-y-6 justify-between md:items-end items-center max-sm:items-center">
                     <h1 className="font-inter font-bold sm:text-5xl text-4xl leading-[3.5rem] tracking-[-0.67px] sm:text-left text-center w-full max-w-[35.5rem]">
                         We love our Customers and They love us too
                     </h1>
@@ -46,7 +46,7 @@ const Testimonials = () => {
                         iconMargin="-ml-1"
                     />
                 </div>
-                <div className="flex lg:flex-row flex-col sm:gap-x-7 gap-y-14 sm:mt-[4.5rem] mt-9">
+                <div className="flex lg:flex-row flex-col sm:gap-x-7 gap-y-14 md:mt-[4.5rem] mt-9">
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="flex flex-col sm:max-w-none lg:max-w-[22.5rem] max-w-[22.5rem]">
                             <Image

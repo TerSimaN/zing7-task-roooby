@@ -1,6 +1,6 @@
 import asanaLogo from './asana-logo.svg';
-import chartsLogo from './charts-logo.svg';
-import gearLogo from './gear-logo.svg';
+import trello from './trello-logo.svg';
+import zapier from './zapier-logo.svg';
 import googleMeetLogo from './google-meet-logo.svg';
 import hubSpotLogo from './hub-spot-logo.svg';
 import intercomLogo from './intercom-logo.svg';
@@ -20,8 +20,8 @@ import walmartLogo from './walmart-logo.svg';
 
 export {
     asanaLogo,
-    chartsLogo,
-    gearLogo,
+    trello,
+    zapier,
     googleMeetLogo,
     hubSpotLogo,
     intercomLogo,

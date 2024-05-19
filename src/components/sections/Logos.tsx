@@ -1,15 +1,15 @@
-import { asanaLogo, chartsLogo, gearLogo, googleMeetLogo, hubSpotLogo, intercomLogo, microsoftTeamsLogo, slackLogo, zendeskLogo, zoomLogo } from "../../../public/assets/logos";
+import { asanaLogo, trello, zapier, googleMeetLogo, hubSpotLogo, intercomLogo, microsoftTeamsLogo, slackLogo, zendeskLogo, zoomLogo } from "../../../public/assets/logos";
 import Image from "next/image"
 import Button from "../ui/Button";
 
-const extensions = [
-    { imgSrc: gearLogo, imgAlt: 'gear logo' },
+const logoImages = [
+    { imgSrc: zapier, imgAlt: 'zapier logo' },
     { imgSrc: hubSpotLogo, imgAlt: 'HubSpot logo' },
     { imgSrc: zoomLogo, imgAlt: 'Zoom logo' },
     { imgSrc: googleMeetLogo, imgAlt: 'Google Meet logo' },
     { imgSrc: zendeskLogo, imgAlt: 'Zendesk logo' },
     { imgSrc: intercomLogo, imgAlt: 'Intercom logo' },
-    { imgSrc: chartsLogo, imgAlt: 'chart logo' },
+    { imgSrc: trello, imgAlt: 'trello logo' },
     { imgSrc: slackLogo, imgAlt: 'Slack logo' },
     { imgSrc: asanaLogo, imgAlt: 'Asana logo' },
     { imgSrc: microsoftTeamsLogo, imgAlt: 'Microsoft Teams logo' },
@@ -24,10 +24,10 @@ const Logos = () => {
                     Expand the capabilities of <span className="font-inter font-black text-roooby-gray-600 text-lg leading-7">Roooby</span> with hundreds of apps and integrations
                 </span>
                 <div className="flex sm:flex-row flex-col max-sm:items-center flex-wrap gap-2 sm:mt-[4.5rem] mt-9">
-                    {extensions.map((extension, i) => (
+                    {logoImages.map((logo, i) => (
                         <Image
-                            src={extension.imgSrc}
-                            alt={extension.imgAlt}
+                            src={logo.imgSrc}
+                            alt={logo.imgAlt}
                             key={i}
                         />
                     ))}

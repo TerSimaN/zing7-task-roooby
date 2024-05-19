@@ -20,14 +20,14 @@ const MainHeader = () => {
 
     return (
         <header className="bg-roooby-gray-100 py-6">
-            <div className="flex items-center max-lg:justify-between container max-sm:px-6">
+            <div className="flex items-center xl:justify-normal justify-between container max-sm:px-6">
                 <Link href={'/'} className="sm:max-xl:ml-6 lg:mr-[6.25rem]" onClick={() => { setOpen(false); setSelected(-1); }}>
                     <Image
                         src={rooobyLogo}
                         alt="Roooby Logo"
                     />
                 </Link>
-                <ul className="md:flex max-md:hidden lg:gap-12 gap-6 font-inter font-medium text-sm mt-2">
+                <ul className="md:flex hidden lg:gap-12 gap-6 font-inter font-medium text-sm mt-2">
                     {links.map((link, i) => (
                         <li key={i}
                             className={`flex justify-center ${selected === i ? `border-b-[3px] border-black w-10` : `border-b-[3px] border-transparent w-10`} pb-2`}
@@ -36,7 +36,7 @@ const MainHeader = () => {
                         </li>
                     ))}
                 </ul>
-                <div className="md:flex max-md:hidden sm:flex-row items-center lg:gap-5 gap-3 xl:ml-auto max-xl:mr-6">
+                <div className="md:flex hidden sm:flex-row items-center lg:gap-5 gap-3 xl:ml-auto max-xl:mr-6">
                     <Button
                         className="font-inter font-bold text-xs tracking-[-0.19px] bg-white border rounded border-roooby-gray-200 w-[4.75rem] h-8"
                         text="Log In"
@@ -46,12 +46,12 @@ const MainHeader = () => {
                         text="Try For Free"
                     />
                 </div>
-                <button type="button" className="sm:hidden" onClick={() => setOpen(!open)}>
+                <button className="md:hidden sm:mr-6" type="button" onClick={() => setOpen(!open)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`${open ? `hidden` : ``} w-6 h-6`}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </button>
-                <div className={`sm:hidden${open ? `` : ` hidden`}`}>
+                <div className={`md:hidden ${open ? `` : `hidden`}`}>
                     <div className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-roooby-gray-100 px-6 py-6 max-w-sm`}>
                         <div className="flex items-center justify-between">
                             <Link href={'/'} onClick={() => { setOpen(false); setSelected(-1); }}>

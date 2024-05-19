@@ -51,8 +51,8 @@ const FAQs = () => {
     const [open, setOpen] = useState(-1);
 
     return (
-        <div className="flex flex-col container max-sm:px-4 sm:my-[7.5rem] my-[4.5rem]">
-            <h1 className="font-inter font-bold text-[4rem] leading-[4.5rem] tracking-[-0.89px] max-sm:text-center max-w-[37.25rem]">Frequently asked questions</h1>
+        <div className="flex flex-col container sm:px-8 xl:px-0 px-4 xl:my-[7.5rem] my-[4.5rem]">
+            <h1 className="font-inter font-bold xl:text-[4rem] text-6xl leading-[4.5rem] tracking-[-0.89px] max-sm:text-center max-w-[37.25rem]">Frequently asked questions</h1>
             <div className="flex flex-col gap-y-12 ml-auto mt-[4.5rem] max-w-[59.185rem]">
                 {accordions.map((accordion, i) => (
                     <div key={i} className="border-t border-roooby-gray-300 pt-[3.25rem]">

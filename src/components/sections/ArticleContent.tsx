@@ -12,10 +12,10 @@ type Props = {
 
 const ArticleContent = (props: Props) => {
     return (
-        <div className="flex flex-col max-sm:px-4 mx-auto sm:mt-[6.25rem] mt-12 max-w-[46.75rem]">
+        <div className="flex flex-col sm:px-8 lg:px-0 px-4 mx-auto lg:mt-[6.25rem] mt-12 max-w-[46.75rem]">
             <p className={`${props.isVisible ? `` : `hidden`} font-inter font-medium text-2xl leading-9 tracking-[-0.33px]`}>{props.post?.body}</p>
-            <div className="flex flex-col gap-y-4">
-                <h1 className="font-inter font-bold text-5xl tracking-[-0.67px] mt-10">What is a sales funnel?</h1>
+            <div className={`flex flex-col gap-y-4 ${props.isVisible ? `mt-10` : `sm:mt-10 mt-0`}`}>
+                <h1 className="font-inter font-bold sm:text-5xl text-4xl tracking-[-0.67px]">What is a sales funnel?</h1>
                 <p className="font-inter font-normal text-lg leading-7">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -51,7 +51,7 @@ const ArticleContent = (props: Props) => {
                 className="sm:mt-[4.5rem] mt-9"
             />
             <div className="flex flex-col gap-y-4 sm:mt-[4.5rem] mt-9">
-                <h1 className="font-inter font-bold text-5xl tracking-[-0.67px]">What is a sales funnel?</h1>
+                <h1 className="font-inter font-bold sm:text-5xl text-4xl tracking-[-0.67px]">What is a sales funnel?</h1>
                 <p className="font-inter font-normal text-lg leading-7">
                     In order to fully answer the question “What is a sales funnel?”, we need to tackle the different steps of the funnel.
                     While different organizations have their own ways of managing and naming the sales process and customer touchpoints,
@@ -59,7 +59,7 @@ const ArticleContent = (props: Props) => {
                 </p>
             </div>
             <div className="flex flex-col sm:mt-[4.5rem] mt-10">
-                <h1 className="font-inter font-bold text-[2rem] leading-10 tracking-[-0.44px]">1. Top of the sales funnel: Awareness and discovery</h1>
+                <h1 className="font-inter font-bold sm:text-[2rem] text-2xl leading-10 tracking-[-0.44px]">1. Top of the sales funnel: Awareness and discovery</h1>
                 <p className="font-inter font-normal text-lg leading-7 mt-3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

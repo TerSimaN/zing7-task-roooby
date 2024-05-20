@@ -1,7 +1,7 @@
 const Button = ({ className = '', text = '', hasIcon = '', iconColor = '', iconMargin = '' }) => {
   return (
     <button className={`${(hasIcon === 'true') ? `flex items-center` : ''} ${(className !== '') ? `${className}` : ''}`}>
-      {text}
+      <span>{text}</span>
       <svg
         className={`${(hasIcon === 'true') ? `block` : `hidden`} ${(iconColor !== '') ? `${iconColor}` : ''} ${(iconMargin !== '') ? `${iconMargin}` : ''}`}
         width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"

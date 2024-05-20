@@ -69,11 +69,11 @@ export default function Blog() {
         <main>
             <div className="bg-roooby-gray-100 lg:px-0 px-4 xl:pt-[4.5rem] pt-9">
                 <div className="container flex flex-col max-xl:items-center">
-                    <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-xl:text-center max-w-[40.75rem]">
-                        News and insights <span className="font-inter font-bold text-roooby-gray-300 text-[4rem] leading-[4.75rem] tracking-[-0.89px]">from our experts</span>
+                    <h1 className="font-inter font-bold sm:text-[4rem] text-5xl lg:leading-[4.75rem] leading-[3.5rem] tracking-[-0.89px] max-xl:text-center sm:max-xl:text-balance max-w-[40.75rem]">
+                        News and insights<span className="text-roooby-gray-300"> from our experts</span>
                     </h1>
-                    <div className="max-sm:hidden">
-                        <ul className="flex flex-row items-center justify-between xl:gap-x-0 gap-x-8 mt-[6.25rem] max-w-[36.25rem]">
+                    <div className="max-sm:hidden xl:mt-[6.25rem] mt-16 max-w-[36.25rem]">
+                        <ul className="flex flex-row items-center justify-between xl:gap-x-0 gap-x-8">
                             {tabs.map((tab, i) => (
                                 <li key={i}
                                     className={`border-b-[3px] font-inter font-medium ${selected === i ? `border-roooby-green-400` : `border-transparent text-roooby-gray-400`} text-lg pb-7 cursor-pointer select-none`}

@@ -19,6 +19,21 @@ const Article = (props: {
   },
   text?: string
 }) => {
+
+  let searchParams = new URLSearchParams();
+  const queryParams: string[][] = [
+    ["label", props.articleAtr.label],
+    ["imgSrc", props.articleAtr.imgSrc],
+    ["imgAlt", props.articleAtr.imgAlt],
+    ["header", props.articleAtr.header],
+    ["date", props.articleAtr.date],
+    ["author", props.articleAtr.author]
+  ];
+
+  if (!props.postId) {
+    searchParams = new URLSearchParams(queryParams);
+  }
+
   return (
     <article
       className={
@@ -38,7 +53,7 @@ const Article = (props: {
       <h1 className={`font-inter font-bold ${props.classNameAtr.headingAtr ? `${props.classNameAtr.headingAtr}` : `text-2xl leading-[34px] tracking-[-0.33px]`} mt-4 max-w-[34.75rem]`}>
         <Link href={{
           pathname: `/blog/${props.postId ? props.postId : props.articleAtr.label}`,
-          query: `${props.postId ? '' : `label=${props.articleAtr.label}&header=${props.articleAtr.header}&date=${props.articleAtr.date}&author=${props.articleAtr.author}&imgSrc=${props.articleAtr.imgSrc}&imgAlt=${props.articleAtr.imgAlt}`}`
+          query: searchParams.toString()
         }}>
           <span className="absolute inset-0"></span>
           {props.articleAtr.header}
@@ -47,7 +62,9 @@ const Article = (props: {
       <p className={`${props.text ? `` : `hidden`} font-inter font-normal text-md leading-[34px] tracking-[-0.33px]`}>
         {props.text}
       </p>
-      <span className="font-inter font-medium text-base mt-6">{props.articleAtr.date}, <span className="font-inter font-medium text-roooby-gray-300 text-base">by {props.articleAtr.author}</span></span>
+      <span className="font-inter font-medium text-base mt-6">{props.articleAtr.date},
+        <span className="font-inter font-medium text-roooby-gray-300 text-base"> by {props.articleAtr.author}</span>
+      </span>
     </article>
   )
 }

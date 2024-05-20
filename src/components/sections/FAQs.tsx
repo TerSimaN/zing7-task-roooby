@@ -57,7 +57,7 @@ const FAQs = () => {
                 {accordions.map((accordion, i) => (
                     <div key={i} className="border-t border-roooby-gray-300 pt-[3.25rem]">
                         <button className="flex items-center justify-between w-full" onClick={() => setOpen(i)}>
-                            <h1 className="font-inter font-medium text-[2rem] leading-10 tracking-[-0.44px]">{accordion.header}</h1>
+                            <h1 className="font-inter font-medium text-[2rem] text-left leading-10 tracking-[-0.44px]">{accordion.header}</h1>
                             <Image
                                 src={iconAdd}
                                 alt="icon add"

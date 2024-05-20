@@ -14,9 +14,9 @@ const sections = [
         name: 'Company',
         links: [
             { name: 'About', href: '#' },
-            { name: 'Pricing', href: '#' },
+            { name: 'Pricing', href: '/pricing' },
             { name: 'Jobs', href: '#' },
-            { name: 'Blog', href: '#' },
+            { name: 'Blog', href: '/blog' },
             { name: 'Careers', href: '#' }
         ]
     },

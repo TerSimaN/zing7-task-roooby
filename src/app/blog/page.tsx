@@ -67,16 +67,16 @@ export default function Blog() {
 
     return (
         <main>
-            <div className="bg-roooby-gray-100 max-sm:px-4 sm:pt-[4.5rem] max-lg:px-4 pt-9">
-                <div className="flex flex-col container">
-                    <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-lg:text-center max-w-[40.75rem]">
+            <div className="bg-roooby-gray-100 lg:px-0 px-4 xl:pt-[4.5rem] pt-9">
+                <div className="container flex flex-col max-xl:items-center">
+                    <h1 className="font-inter font-bold text-[4rem] leading-[4.75rem] tracking-[-0.89px] max-xl:text-center max-w-[40.75rem]">
                         News and insights <span className="font-inter font-bold text-roooby-gray-300 text-[4rem] leading-[4.75rem] tracking-[-0.89px]">from our experts</span>
                     </h1>
-                    <div className="max-md:hidden">
-                        <ul className="flex flex-row max-sm:flex-wrap items-center sm:justify-between max-sm:gap-x-12 max-sm:gap-y-4 sm:mt-[6.25rem] mt-12 max-w-[36.25rem]">
+                    <div className="max-sm:hidden">
+                        <ul className="flex flex-row items-center justify-between xl:gap-x-0 gap-x-8 mt-[6.25rem] max-w-[36.25rem]">
                             {tabs.map((tab, i) => (
                                 <li key={i}
-                                    className={`font-inter font-medium ${selected === i ? `border-b-[3px] border-roooby-green-400` : `border-b-[3px] border-transparent text-roooby-gray-400`} text-lg pb-6 cursor-pointer select-none`}
+                                    className={`border-b-[3px] font-inter font-medium ${selected === i ? `border-roooby-green-400` : `border-transparent text-roooby-gray-400`} text-lg pb-7 cursor-pointer select-none`}
                                     onClick={() => setSelected(i)}
                                 >
                                     {tab.name}
@@ -84,7 +84,7 @@ export default function Blog() {
                             ))}
                         </ul>
                     </div>
-                    <div className="md:hidden mt-12 mb-6">
+                    <div className="sm:hidden mt-12 mb-6 w-full max-w-sm">
                         <select className="rounded-md bg-white font-inter font-medium text-lg select-none pl-3 pr-10 py-2 w-full" name="lang">
                             {tabs.map((tab, i) => (
                                 <option key={i} value={tab.name}>{tab.name}</option>
@@ -93,12 +93,11 @@ export default function Blog() {
                     </div>
                 </div>
             </div>
-            <div className="flex sm:flex-row flex-col flex-wrap container gap-x-7 sm:gap-y-[7.5rem] gap-y-14 max-sm:px-6 sm:pb-44 pb-20 sm:mt-[7.5rem] mt-14">
-                <div className="flex sm:flex-row flex-col sm:gap-x-8 gap-y-8">
-                    <div className="flex flex-col">
-                        <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                        <span className="font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px] mt-6">Service</span>
-                        <h1 className="font-inter font-bold text-[2.5rem] leading-[3rem] tracking-[-0.56px] mt-4 max-w-[34.75rem]">
+            <div className="container flex flex-col max-lg:items-center sm:gap-y-20 xl:gap-y-[7.5rem] gap-y-14 sm:px-2.5 md:px-12 lg:px-8 xl:px-0 px-6 sm:pb-44 pb-20 sm:mt-16 xl:mt-[7.5rem] mt-14">
+                <div className="relative flex lg:flex-row flex-col gap-x-8 gap-y-6">
+                    <div className="flex flex-col max-w-fit">
+                        <span className="border-t border-roooby-gray-300 font-inter font-bold uppercase text-roooby-gray-300 text-sm tracking-[1.4px] pt-6">Service</span>
+                        <h1 className="font-inter font-bold xl:text-[2.5rem] text-4xl leading-[3rem] tracking-[-0.56px] mt-4 max-w-[34.75rem]">
                             <Link href={{
                                 pathname: '/blog/Service',
                                 query: {
@@ -109,14 +108,16 @@ export default function Blog() {
                                     imgSrc: '/assets/images/blogImages/service-image-1.svg',
                                     imgAlt: 'service-image-1'
                                 }
-                            }}>The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers</Link>
+                            }}>
+                                <span className="absolute inset-0"></span>
+                                The 2024 State of Marketing & Trends Report: Data from 1400+ Global Marketers
+                            </Link>
                         </h1>
-                        <div className="flex flex-row justify-between sm:mt-[7.25rem] mt-12">
+                        <div className="flex flex-row justify-between border-b border-roooby-gray-300 pb-5 sm:mt-14 md:mt-16 lg:mt-[4.5rem] xl:mt-[7.5rem] mt-12">
                             <span className="font-inter font-medium text-base">05 Sep 2024,
                                 <span className="font-inter font-medium text-roooby-gray-300 text-base"> by Maxwell Iskiev</span>
                             </span>
                         </div>
-                        <div className="border-t border-roooby-gray-300 h-[1px] mt-6"></div>
                     </div>
                     <Image
                         src="/assets/images/blogImages/service-image-1.svg"
@@ -125,67 +126,79 @@ export default function Blog() {
                         height={370}
                     />
                 </div>
-                {posts.map((post, index) => {
-                    const author = users.find((user) => user.id == post.userId);
-                    const photo = photos?.[index];
+                <div className="flex sm:flex-row flex-col flex-wrap max-sm:items-center lg:justify-normal justify-between lg:gap-x-7 sm:gap-y-[7.5rem] gap-y-14 md:px-5 lg:px-0">
+                    {posts.map((post, index) => {
+                        const author = users.find((user) => user.id == post.userId);
+                        const photo = photos?.[index];
 
-                    return (
+                        return (
+                            <Article
+                                key={post.id}
+                                postId={post.id}
+                                articleAtr={{
+                                    label: "Post",
+                                    imgSrc: photo?.thumbnailUrl,
+                                    imgAlt: photo?.title,
+                                    imgWidth: 360,
+                                    imgHeight: 360,
+                                    header: post.title,
+                                    date: date,
+                                    author: (author?.name ?? 'Annonymous')
+                                }}
+                                text={post.body}
+                                classNameAtr={{ headingAtr: "text-2xl leading-9 tracking-[-0.33px]" }}
+                            />
+                        )
+                    })}
+                    {articles.map((article, i) => (
                         <Article
-                            key={post.id}
-                            postId={post.id}
-                            label="Post"
-                            imgSrc={photo?.thumbnailUrl}
-                            imgAlt={photo?.title}
-                            imgWidth="360"
-                            imgHeight="360"
-                            header={post.title}
-                            text={post.body}
-                            date={date}
-                            author={author?.name ?? 'Annonymous'}
-                            className="text-2xl leading-9 tracking-[-0.33px]"
+                            key={i}
+                            articleAtr={{
+                                label: article.label,
+                                imgSrc: article.imgSrc,
+                                imgAlt: article.imgAlt,
+                                header: article.header,
+                                date: article.date,
+                                author: article.author
+                            }}
+                            classNameAtr={{ headingAtr: "text-2xl leading-9 tracking-[-0.33px]" }}
                         />
-                    )
-                })}
-                {articles.map((article, i) => (
+                    ))}
+                    <BlogSection />
                     <Article
-                        key={i}
-                        label={article.label}
-                        imgSrc={article.imgSrc}
-                        imgAlt={article.imgAlt}
-                        header={article.header}
-                        date={article.date}
-                        author={article.author}
-                        className="text-2xl leading-9 tracking-[-0.33px]"
+                        articleAtr={{
+                            label: "Service",
+                            imgSrc: "/assets/images/blogImages/service-image-2.svg",
+                            imgAlt: "service-image-2",
+                            header: "Sales Funnels: Definition, Process, Stages and Examples",
+                            date: "01 Dec 2022",
+                            author: "Edith Rose"
+                        }}
+                        classNameAtr={{ headingAtr: "text-2xl leading-9 tracking-[-0.33px]" }}
                     />
-                ))}
-                <BlogSection />
-                <Article
-                    label="Service"
-                    imgSrc="/assets/images/blogImages/service-image-2.svg"
-                    imgAlt="service-image-2"
-                    header="Sales Funnels: Definition, Process, Stages and Examples"
-                    date="01 Dec 2022"
-                    author="Edith Rose"
-                    className="text-2xl leading-9 tracking-[-0.33px]"
-                />
-                <Article
-                    label="Sales"
-                    imgSrc="/assets/images/blogImages/sales-image-4.svg"
-                    imgAlt="sales-image-4"
-                    header="What is a sales and how do you build one?"
-                    date="29 Mar 2022"
-                    author="Amanda Brooks"
-                    className="text-2xl leading-9 tracking-[-0.33px]"
-                />
-                <Article
-                    label="Service"
-                    imgSrc="/assets/images/blogImages/service-image-3.svg"
-                    imgAlt="service-image-3"
-                    header="10 real estate cold calling scripts to increase lead "
-                    date="27 Dec 2022"
-                    author="Roxie Sandoval"
-                    className="text-2xl leading-9 tracking-[-0.33px]"
-                />
+                    <Article
+                        articleAtr={{
+                            label: "Sales",
+                            imgSrc: "/assets/images/blogImages/sales-image-4.svg",
+                            imgAlt: "sales-image-4",
+                            header: "What is a sales and how do you build one?",
+                            date: "29 Mar 2022",
+                            author: "Amanda Brooks"
+                        }}
+                        classNameAtr={{ headingAtr: "text-2xl leading-9 tracking-[-0.33px]" }}
+                    />
+                    <Article
+                        articleAtr={{
+                            label: "Service",
+                            imgSrc: "/assets/images/blogImages/service-image-3.svg",
+                            imgAlt: "service-image-3",
+                            header: "10 real estate cold calling scripts to increase lead ",
+                            date: "27 Dec 2022",
+                            author: "Roxie Sandoval"
+                        }}
+                        classNameAtr={{ headingAtr: "text-2xl leading-9 tracking-[-0.33px]" }}
+                    />
+                </div>
             </div>
             <Cta />
         </main>

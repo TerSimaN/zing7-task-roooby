@@ -46,9 +46,9 @@ export default async function BlogDetails(props: Params) {
                     </div>
                     <Image
                         src={`${photo?.url ?? props.searchParams.imgSrc ?? '/'}`}
-                        alt={`${photo?.title ?? props.searchParams.imgAlt}`}
-                        width={`${photo?.url !== undefined ? 600 : 945}`}
-                        height={`${photo?.url !== undefined ? 600 : 511}`}
+                        alt={`${photo?.title ?? props.searchParams.imgAlt ?? 'image alt not found'}`}
+                        width={`${photo?.url ? 600 : 945}`}
+                        height={`${photo?.url ? 600 : 511}`}
                         className={`${isVisible || (props.searchParams.imgSrc !== undefined) ? `` : `hidden`}`}
                     />
                 </div>
@@ -59,28 +59,37 @@ export default async function BlogDetails(props: Params) {
                     <h1 className="font-inter font-bold sm:text-[4rem] text-6xl leading-[4.5rem] tracking-[-0.89px] max-sm:text-center">More from this topic</h1>
                     <div className="flex sm:flex-row flex-col items-center sm:gap-x-7 gap-y-7">
                         <Article
-                            label="Sales"
-                            header="The best cities for sales careers in 2022"
-                            date="20 Mar 2023"
-                            author="Bill Holloway"
-                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-1.svg"
-                            imgAlt="blog-image-1"
+                            articleAtr={{
+                                label: "Sales",
+                                imgSrc: "/assets/images/blogImages/blogDetailsImages/blog-image-1.svg",
+                                imgAlt: "blog-image-1",
+                                header: "The best cities for sales careers in 2022",
+                                date: "20 Mar 2023",
+                                author: "Bill Holloway"
+                            }}
+                            classNameAtr={{}}
                         />
                         <Article
-                            label="Sales"
-                            header="What is a sales Yoora and how do you build one?"
-                            date="29 Mar 2023"
-                            author="Amanda Brooks"
-                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-2.svg"
-                            imgAlt="blog-image-2"
+                            articleAtr={{
+                                label: "Sales",
+                                imgSrc: "/assets/images/blogImages/blogDetailsImages/blog-image-2.svg",
+                                imgAlt: "blog-image-2",
+                                header: "What is a sales Yoora and how do you build one?",
+                                date: "29 Mar 2023",
+                                author: "Amanda Brooks"
+                            }}
+                            classNameAtr={{}}
                         />
                         <Article
-                            label="Service"
-                            header="10 real estate cold calling scripts to increase"
-                            date="27 Dec 2023"
-                            author="Roxie Sandoval"
-                            imgSrc="/assets/images/blogImages/blogDetailsImages/blog-image-3.svg"
-                            imgAlt="blog-image-3"
+                            articleAtr={{
+                                label: "Service",
+                                imgSrc: "/assets/images/blogImages/blogDetailsImages/blog-image-3.svg",
+                                imgAlt: "blog-image-3",
+                                header: "10 real estate cold calling scripts to increase",
+                                date: "27 Dec 2023",
+                                author: "Roxie Sandoval"
+                            }}
+                            classNameAtr={{}}
                         />
                     </div>
                 </div>

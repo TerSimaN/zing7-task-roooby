@@ -18,23 +18,27 @@ const moreArticles = [
 
 const BlogSection = () => {
     return (
-        <div className="flex sm:flex-row flex-col container gap-x-8">
+        <div className="container flex lg:flex-row flex-col sm:max-lg:items-center gap-x-8">
             <Article
-                label="Marketing"
-                imgSrc="/assets/images/blogImages/marketing-image-1.svg"
-                imgAlt="marketing-image-1"
-                imgWidth="555"
-                imgHeight="370"
-                header="Email marketing best practices: 10 experts share their email tips"
-                date="23 Nov 2023"
-                author="Joshua Nash"
-                className="text-3xl leading-10 tracking-[-0.44px] max-sm:mb-8 max-w-[34.75rem] h-[5.25rem]"
+                articleAtr={{
+                    label: "Marketing",
+                    imgSrc: "/assets/images/blogImages/marketing-image-1.svg",
+                    imgAlt: "marketing-image-1",
+                    imgWidth: 555,
+                    imgHeight: 370,
+                    header: "Email marketing best practices: 10 experts share their email tips",
+                    date: "23 Nov 2023",
+                    author: "Joshua Nash"
+                }}
+                classNameAtr={{
+                    headingAtr: "sm:text-3xl text-2xl leading-10 tracking-[-0.44px] sm:mb-0 lg:max-xl:mb-auto mb-8 h-[5.25rem]",
+                    articleMaxWidth: "max-w-[34.75rem]"
+                }}
             />
             <div className="flex flex-col sm:gap-y-12 gap-y-8 pt-9 max-w-[34.75rem]">
                 {moreArticles.map((article, i) => (
                     <div key={i} className="flex flex-col">
-                        <div className="border-t border-roooby-gray-300 h-[1px]"></div>
-                        <h1 className="font-inter font-bold text-2xl leading-9 tracking-[-0.33px] mt-4 sm:pr-16">
+                        <h1 className="border-t border-roooby-gray-300 font-inter font-bold text-2xl leading-9 tracking-[-0.33px] pt-4 sm:pr-16">
                             <Link href={{
                                 pathname: `/blog/${article.label}`,
                                 query: {

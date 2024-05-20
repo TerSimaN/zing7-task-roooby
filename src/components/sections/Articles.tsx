@@ -18,24 +18,34 @@ const Articles = () => {
             </div>
             <div className="flex sm:flex-row flex-col lg:gap-x-7 gap-x-5 sm:gap-y-0 gap-y-14 sm:px-0 px-4 lg:mt-[4.5rem] mt-10">
                 <Article
-                    label="Service"
-                    imgSrc="/assets/images/deliver-image.svg"
-                    imgAlt="deliver image"
-                    imgWidth="555"
-                    header="How To Deliver a Successful Product Launch"
-                    date="05 Sep 2024"
-                    author="Joshua Nash"
-                    className="lg:text-3xl text-2xl leading-10 tracking-[-0.44px] max-w-[34.75rem]"
+                    articleAtr={{
+                        label: "Service",
+                        imgSrc: "/assets/images/deliver-image.svg",
+                        imgAlt: "deliver image",
+                        imgWidth: 555,
+                        header: "How To Deliver a Successful Product Launch",
+                        date: "05 Sep 2024",
+                        author: "Joshua Nash"
+                    }}
+                    classNameAtr={{
+                        headingAtr: "lg:text-3xl text-2xl leading-10 tracking-[-0.44px]",
+                        articleMaxWidth: "max-w-[34.75rem]"
+                    }}
                 />
                 <Article
-                    label="Service"
-                    imgSrc="/assets/images/employee-image.svg"
-                    imgAlt="employee image"
-                    imgWidth="555"
-                    header="What Makes an Authentic Employee Profile, and Why Does It Matter?"
-                    date="07 Sep 2023"
-                    author="Ivan Neshev"
-                    className="lg:text-3xl text-2xl leading-10 tracking-[-0.44px] max-w-[34.75rem]"
+                    articleAtr={{
+                        label: "Service",
+                        imgSrc: "/assets/images/employee-image.svg",
+                        imgAlt: "employee image",
+                        imgWidth: 555,
+                        header: "What Makes an Authentic Employee Profile, and Why Does It Matter?",
+                        date: "07 Sep 2023",
+                        author: "Ivan Neshev"
+                    }}
+                    classNameAtr={{
+                        headingAtr: "lg:text-3xl text-2xl leading-10 tracking-[-0.44px]",
+                        articleMaxWidth: "max-w-[34.75rem]"
+                    }}
                 />
             </div>
         </div>

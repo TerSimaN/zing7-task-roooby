@@ -1,7 +1,10 @@
 import Image from "next/image"
 import { languageIcon } from "../../../public/assets/icons"
-import { facebookLogo, linkedinLogo, rooobyLogo, twitterLogo } from "../../../public/assets/logos";
+import { rooobyLogo } from "../../../public/assets/logos";
 import Link from "next/link"
+import TwitterIcon from "../ui/TwitterIcon";
+import FacebookIcon from "../ui/FacebookIcon";
+import LinkedInIcon from "../ui/LinkedInIcon";
 
 const links = [
     { name: 'Terms of Service', href: '#' },
@@ -70,24 +73,9 @@ const MainFooter = () => {
                         Our team created a fully integrated sales and marketing solution for SMBs
                     </p>
                     <div className="flex flex-row sm:gap-4 justify-between lg:mt-6 mt-4 w-[6.5rem] h-6">
-                        <Image
-                            src={twitterLogo}
-                            alt="Twitter"
-                            width={24}
-                            height={24}
-                        />
-                        <Image
-                            src={facebookLogo}
-                            alt="Facebook"
-                            width={24}
-                            height={24}
-                        />
-                        <Image
-                            src={linkedinLogo}
-                            alt="LinkedIn"
-                            width={24}
-                            height={24}
-                        />
+                        <TwitterIcon />
+                        <FacebookIcon />
+                        <LinkedInIcon />
                     </div>
                 </div>
                 <div className="flex sm:flex-row flex-col sm:items-start items-center justify-between lg:max-xl:justify-around w-full max-w-[768px]">

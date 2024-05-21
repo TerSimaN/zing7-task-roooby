@@ -1,6 +1,9 @@
 import Image from "next/image"
 import { insertLinkIcon } from "../../../public/assets/icons"
-import { facebookLogo, linkedinLogo, twitterLogo } from "../../../public/assets/logos"
+import LinkedInIcon from "../ui/LinkedInIcon"
+import TwitterIcon from "../ui/TwitterIcon"
+import FacebookIcon from "../ui/FacebookIcon"
+import Link from "next/link"
 
 type Props = {
     post: JsonPlaceholder.Post,
@@ -78,7 +81,7 @@ const ArticleContent = (props: Props) => {
                     vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
                 </p>
                 <div className="flex flex-col mt-4">
-                    <div className="flex flex-row items-center justify-between border-y border-roooby-gray-300 py-6">
+                    <div className="flex sm:flex-row flex-col sm:items-center justify-between sm:gap-y-0 gap-y-6 border-y border-roooby-gray-300 sm:py-6 py-4">
                         <div className="flex flex-row">
                             <Image
                                 src={`${props.photo?.url ?? '/assets/images/blogImages/blogDetailsImages/shawOval.svg'}`}
@@ -92,30 +95,17 @@ const ArticleContent = (props: Props) => {
                             </div>
                         </div>
                         <div className="flex flex-row gap-x-4">
-                            <Image
-                                src={facebookLogo}
-                                alt="Facebook"
-                                width={24}
-                                height={24}
-                            />
-                            <Image
-                                src={twitterLogo}
-                                alt="Twitter"
-                                width={24}
-                                height={24}
-                            />
-                            <Image
-                                src={linkedinLogo}
-                                alt="LinkedIn"
-                                width={24}
-                                height={24}
-                            />
-                            <Image
-                                src={insertLinkIcon}
-                                alt="insert link"
-                                width={24}
-                                height={24}
-                            />
+                            <FacebookIcon />
+                            <TwitterIcon />
+                            <LinkedInIcon />
+                            <Link href={'#'}>
+                                <Image
+                                    src={insertLinkIcon}
+                                    alt="insert link"
+                                    width={24}
+                                    height={24}
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>

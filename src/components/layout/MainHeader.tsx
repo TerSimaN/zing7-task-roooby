@@ -20,7 +20,7 @@ const MainHeader = () => {
 
     return (
         <header className="bg-roooby-gray-100 py-6">
-            <div className="flex items-center xl:justify-normal justify-between container max-sm:px-6">
+            <div className="container flex items-center xl:justify-normal justify-between sm:px-0 px-6">
                 <Link href={'/'} className="sm:max-xl:ml-6 lg:mr-[6.25rem]" onClick={() => { setOpen(false); setSelected(-1); }}>
                     <Image
                         src={rooobyLogo}
@@ -29,14 +29,14 @@ const MainHeader = () => {
                 </Link>
                 <ul className="md:flex hidden lg:gap-12 gap-6 font-inter font-medium text-sm mt-2">
                     {links.map((link, i) => (
-                        <li key={i}
-                            className={`flex justify-center ${selected === i ? `border-b-[3px] border-black w-10` : `border-b-[3px] border-transparent w-10`} pb-2`}
-                        >
-                            <Link href={link.href} onClick={() => setSelected(i)}>{link.name}</Link>
+                        <li key={i} className={`flex justify-center border-b-2 ${selected === i ? `border-black` : `border-transparent`} pb-2 w-10`}>
+                            <Link href={link.href} onClick={() => setSelected(i)}>
+                                {link.name}
+                            </Link>
                         </li>
                     ))}
                 </ul>
-                <div className="md:flex hidden sm:flex-row items-center lg:gap-5 gap-3 xl:ml-auto max-xl:mr-6">
+                <div className="md:flex hidden sm:flex-row items-center lg:gap-5 gap-3 xl:ml-auto xl:mr-0 mr-6">
                     <Button
                         className="font-inter font-bold text-xs tracking-[-0.19px] bg-white border rounded border-roooby-gray-200 w-[4.75rem] h-8"
                         text="Log In"
@@ -52,7 +52,7 @@ const MainHeader = () => {
                     </svg>
                 </button>
                 <div className={`md:hidden ${open ? `` : `hidden`}`}>
-                    <div className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-roooby-gray-100 px-6 py-6 max-w-sm`}>
+                    <div className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-roooby-gray-100 px-6 py-6 sm:max-w-sm`}>
                         <div className="flex items-center justify-between">
                             <Link href={'/'} onClick={() => { setOpen(false); setSelected(-1); }}>
                                 <Image
@@ -69,10 +69,10 @@ const MainHeader = () => {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-200">
                                 <div className="flex flex-col gap-y-2 py-6">
-                                    <ul className="flex flex-col gap-y-2 font-inter font-medium text-base">
+                                    <ul className="flex flex-col gap-y-3 font-inter font-medium text-base">
                                         {links.map((link, i) => (
-                                            <li key={link.href + i} className="block px-3 py-3 -mx-3">
-                                                <Link href={link.href} onClick={() => { setOpen(false); setSelected(i); }}>
+                                            <li key={link.href + i}>
+                                                <Link href={link.href} className="block rounded-lg hover:bg-roooby-gray-200 px-3 py-3 -mx-3" onClick={() => { setOpen(false); setSelected(i); }}>
                                                     {link.name}
                                                 </Link>
                                             </li>

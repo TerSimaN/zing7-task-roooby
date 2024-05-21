@@ -52,9 +52,9 @@ export default async function BlogDetails(props: Params) {
                     <Image
                         src={`${photo?.url ?? props.searchParams.imgSrc ?? '/'}`}
                         alt={`${photo?.title ?? props.searchParams.imgAlt ?? 'image alt not found'}`}
-                        width={`${photo?.url ? 600 : 945}`}
-                        height={`${photo?.url ? 600 : 511}`}
-                        className={`${isVisible || (props.searchParams.imgSrc !== undefined) ? `` : `hidden`}`}
+                        width={945}
+                        height={511}
+                        className={`${isVisible || (props.searchParams.imgSrc !== undefined) ? `` : `hidden`} object-cover w-[59rem] h-[32rem]`}
                     />
                 </div>
             </div>

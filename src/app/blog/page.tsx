@@ -140,7 +140,6 @@ export default function Blog() {
                                     imgSrc: photo?.thumbnailUrl,
                                     imgAlt: photo?.title,
                                     imgWidth: 360,
-                                    imgHeight: 360,
                                     header: post.title,
                                     date: date,
                                     author: (author?.name ?? 'Annonymous')

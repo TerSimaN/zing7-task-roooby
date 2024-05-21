@@ -23,6 +23,7 @@ const Articles = () => {
                         imgSrc: "/assets/images/deliver-image.svg",
                         imgAlt: "deliver image",
                         imgWidth: 555,
+                        imgHeight: 370,
                         header: "How To Deliver a Successful Product Launch",
                         date: "05 Sep 2024",
                         author: "Joshua Nash"
@@ -38,6 +39,7 @@ const Articles = () => {
                         imgSrc: "/assets/images/employee-image.svg",
                         imgAlt: "employee image",
                         imgWidth: 555,
+                        imgHeight: 370,
                         header: "What Makes an Authentic Employee Profile, and Why Does It Matter?",
                         date: "07 Sep 2023",
                         author: "Ivan Neshev"

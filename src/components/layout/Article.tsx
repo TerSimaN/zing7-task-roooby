@@ -48,7 +48,7 @@ const Article = (props: {
         alt={props.articleAtr.imgAlt}
         width={`${props.articleAtr.imgWidth ? props.articleAtr.imgWidth : 360}`}
         height={`${props.articleAtr.imgHeight ? props.articleAtr.imgHeight : 240}`}
-        className="mt-6"
+        className={`mt-6 ${props.articleAtr.imgHeight ? `` : `max-h-60`}`}
       />
       <h1 className={`font-inter font-bold ${props.classNameAtr.headingAtr ? `${props.classNameAtr.headingAtr}` : `text-2xl leading-[34px] tracking-[-0.33px]`} mt-4 max-w-[34.75rem]`}>
         <Link href={{

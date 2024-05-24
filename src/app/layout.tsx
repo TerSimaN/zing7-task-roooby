@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body className="mx-auto max-w-[90rem]">
+      <body>
         <MainHeader />
         {children}
         <MainFooter />

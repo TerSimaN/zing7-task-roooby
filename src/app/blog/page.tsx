@@ -10,6 +10,7 @@ import { getUsers } from "@/lib/actions/users";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ctaImage } from "../../../public/assets/images";
 
 const tabs = [
     { name: 'All Articles' },
@@ -199,7 +200,14 @@ export default function Blog() {
                     />
                 </div>
             </div>
-            <Cta />
+            <div className="relative mx-auto w-full max-w-full">
+                <Image
+                    src={ctaImage}
+                    alt="cta bg image"
+                    className="absolute inset-0 -z-10 object-cover w-full h-full"
+                />
+                <Cta />
+            </div>
         </main>
     );
 }

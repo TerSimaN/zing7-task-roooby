@@ -2,6 +2,8 @@ import Button from "@/components/ui/Button";
 import Cta from "@/components/sections/Cta";
 import FAQs from "@/components/sections/FAQs";
 import PricingPlans from "@/components/sections/PricingPlans";
+import Image from "next/image";
+import { ctaImage } from "../../../public/assets/images";
 
 export default function Pricing() {
     return (
@@ -35,7 +37,14 @@ export default function Pricing() {
                 </div>
             </div>
             <FAQs />
-            <Cta />
+            <div className="relative mx-auto w-full max-w-full">
+                <Image
+                    src={ctaImage}
+                    alt="cta bg image"
+                    className="absolute inset-0 -z-10 object-cover w-full h-full"
+                />
+                <Cta />
+            </div>
         </main>
     );
 }

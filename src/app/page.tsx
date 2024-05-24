@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { headerImage } from "../../public/assets/images";
+import { ctaImage, headerImage } from "../../public/assets/images";
 import Cta from "@/components/sections/Cta";
 import Clients from "@/components/sections/Clients";
 import Testimonials from "@/components/sections/Testimonials";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <div className="bg-roooby-gray-100 overflow-hidden lg:pt-[4.5rem] pt-9">
-        <div className="lg:flex container max-lg:px-6 lg:max-xl:px-8 px-0">
+        <div className="container lg:flex max-lg:px-6 lg:max-xl:px-8 px-0">
           <div className="lg:flex-shrink-0 lg:mx-0 mx-auto lg:max-w-[40rem] max-w-2xl">
             <h1 className="font-inter font-bold text-roooby-blue-dark sm:text-[4rem] text-5xl leading-[4.75rem] tracking-[-0.89px] max-sm:text-center">
               Bringing companies and customers together, anywhere
@@ -33,7 +33,7 @@ export default function Home() {
               <span className="font-inter font-normal text-roooby-gray-500 text-sm max-sm:text-center sm:pl-4">Full access. No credit card required.</span>
             </div>
           </div>
-          <div className="flex lg:flex-none lg:ml-11 lg:mr-0 sm:mt-24 lg:mt-0 mt-16 mx-auto lg:max-w-none max-w-2xl">
+          <div className="flex lg:flex-none lg:ml-11 sm:mt-24 lg:mt-0 mt-16 lg:mx-0 mx-auto lg:max-w-none max-w-2xl">
             <div className="flex sm:max-w-5xl lg:max-w-none max-w-3xl">
               <Image
                 src={headerImage}
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container pb-[5.25rem]">
           <Clients />
         </div>
       </div>
@@ -54,7 +54,14 @@ export default function Home() {
         <Stats />
       </div>
       <Testimonials />
-      <Cta />
+      <div className="relative mx-auto w-full max-w-full">
+        <Image
+          src={ctaImage}
+          alt="cta bg image"
+          className="absolute inset-0 -z-10 object-cover w-full h-full"
+        />
+        <Cta />
+      </div>
     </main>
   );
 }

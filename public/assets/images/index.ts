@@ -9,6 +9,7 @@ import rossOval from './ross-oval.svg';
 import salesImage from './sales-image.svg';
 import serviceImage from './service-image.svg';
 import wilkinsOval from './wilkins-oval.svg';
+import ctaImage from './cta-bg-image.svg';
 
 export {
     deliverImage,
@@ -21,5 +22,6 @@ export {
     rossOval,
     salesImage,
     serviceImage,
-    wilkinsOval
+    wilkinsOval,
+    ctaImage
 }

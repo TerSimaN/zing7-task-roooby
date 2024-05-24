@@ -30,9 +30,6 @@ const config: Config = {
         },
         'roooby-teal': '#004050',
         'roooby-yellow': '#ffe377'
-      },
-      backgroundImage: {
-        'cta-background': "url('/assets/images/cta-bg-image.svg')"
       }
     },
     container: {

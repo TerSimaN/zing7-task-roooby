@@ -2,7 +2,7 @@ import deliverImage from './deliver-image.svg';
 import employeeImage from './employee-image.svg';
 import fosterOval from './foster-oval.svg';
 import gibbsOval from './gibbs-oval.svg';
-import headerImage from './header-image.svg';
+import headerImage from './header-image.png';
 import marketingImage from './marketing-image.svg';
 import phelpsOval from './phelps-oval.svg';
 import rossOval from './ross-oval.svg';

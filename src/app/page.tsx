@@ -15,7 +15,7 @@ export default function Home() {
       <div className="bg-roooby-gray-100 overflow-hidden lg:pt-[4.5rem] pt-9">
         <div className="container lg:flex max-lg:px-6 lg:max-xl:px-8 px-0">
           <div className="lg:flex-shrink-0 lg:mx-0 mx-auto lg:max-w-[40rem] max-w-2xl">
-            <h1 className="font-inter font-bold text-roooby-blue-dark sm:text-[4rem] text-5xl leading-[4.75rem] tracking-[-0.89px] max-sm:text-center">
+            <h1 className="font-inter font-bold text-roooby-blue-dark sm:text-[4rem] text-5xl sm:leading-[4.75rem] tracking-[-0.89px] max-sm:text-center">
               Bringing companies and customers together, anywhere
             </h1>
             <p className="font-inter font-normal text-lg leading-7 max-sm:text-center max-sm:px-2 mt-6 max-w-[30rem]">

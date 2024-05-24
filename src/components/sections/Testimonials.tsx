@@ -34,8 +34,8 @@ const Testimonials = () => {
     return (
         <div className="bg-roooby-gray-100 sm:px-10 md:px-14 xl:px-0 px-4 lg:mt-32 xl:mt-[11.25rem] mt-20">
             <div className="flex flex-col max-sm:items-center container sm:py-16 lg:py-20 xl:py-[7.5rem] py-8">
-                <div className="flex md:flex-row flex-col lg:gap-y-0 sm:gap-y-6 justify-between md:items-end items-center max-sm:items-center">
-                    <h1 className="font-inter font-bold sm:text-5xl text-4xl leading-[3.5rem] tracking-[-0.67px] sm:text-left text-center w-full max-w-[35.5rem]">
+                <div className="flex md:flex-row flex-col lg:gap-y-0 sm:gap-y-6 md:items-end items-center justify-between">
+                    <h1 className="font-inter font-bold text-5xl leading-[3.5rem] tracking-[-0.67px] sm:text-left text-center w-full max-w-[35.5rem]">
                         We love our Customers and They love us too
                     </h1>
                     <Button

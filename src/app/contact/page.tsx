@@ -7,7 +7,7 @@ export default function Contact() {
         <main>
             <div className="bg-roooby-gray-100 lg:pt-[4.5rem] pt-9 lg:pb-[7.5rem] pb-14">
                 <div className="container flex flex-col max-lg:items-center sm:gap-y-[4.5rem] gap-y-9 sm:px-16 xl:px-0 px-1">
-                    <h1 className="font-inter font-bold sm:text-[4rem] text-5xl leading-[4.5rem] tracking-[-0.89px] max-lg:text-center max-w-[34.75rem]">
+                    <h1 className="font-inter font-bold sm:text-[4rem] text-5xl sm:leading-[4.5rem] tracking-[-0.89px] max-lg:text-center max-w-[34.75rem]">
                         Get in touch with our lovely team
                     </h1>
                     <div className="flex lg:flex-row flex-col items-center xl:gap-x-32 gap-x-16 lg:gap-y-0 gap-y-16 sm:px-0 px-4">

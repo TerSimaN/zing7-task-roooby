@@ -4,7 +4,7 @@ import Author from "../ui/Author"
 const Stats = () => {
     return (
         <div className="flex flex-col sm:px-0 px-4">
-            <h1 className="font-inter font-bold text-5xl leading-[4.25rem] tracking-[-0.67px] max-sm:text-center">Real-life results and revenue</h1>
+            <h1 className="font-inter font-bold text-5xl sm:leading-[4.25rem] tracking-[-0.67px] max-sm:text-center">Real-life results and revenue</h1>
             <span className="font-inter font-normal text-roooby-gray-600 text-lg leading-7 max-sm:text-center mt-3">See how companies like yours have smashed their sales success goals</span>
             <div className="flex lg:flex-row flex-col xl:gap-x-[9.25rem] gap-x-16 sm:gap-y-8 border-t border-roooby-gray-300 sm:mt-[4.5rem] mt-12 pt-12">
                 <div className="flex flex-col sm:gap-y-6 max-sm:gap-y-2">

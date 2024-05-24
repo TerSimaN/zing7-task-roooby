@@ -61,7 +61,7 @@ export default async function BlogDetails(props: Params) {
             <ArticleContent isVisible={isVisible} post={post} comments={comments} photo={photo} author={author} />
             <div className="bg-roooby-gray-100 lg:px-8 xl:px-0 px-4 lg:py-[7.5rem] py-14 lg:mt-[11.25rem] mt-20">
                 <div className="container flex flex-col sm:gap-y-[4.5rem] gap-y-9">
-                    <h1 className="font-inter font-bold sm:text-[4rem] text-5xl leading-[4.5rem] tracking-[-0.89px] max-lg:text-center">More from this topic</h1>
+                    <h1 className="font-inter font-bold sm:text-[4rem] text-5xl sm:leading-[4.5rem] tracking-[-0.89px] max-lg:text-center">More from this topic</h1>
                     <div className="flex sm:flex-row flex-col lg:justify-normal sm:justify-center max-sm:items-center lg:gap-x-5 xl:gap-x-7 gap-x-3 gap-y-7">
                         <Article
                             articleAtr={{

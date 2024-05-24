@@ -11,7 +11,7 @@ export default function Pricing() {
             <div className="bg-roooby-gray-100 lg:pt-[4.5rem] pt-9 lg:pb-[7.5rem] pb-14">
                 <div className="flex flex-col container sm:px-6 xl:px-0 px-4">
                     <div className="flex xl:flex-row flex-col max-lg:items-center sm:gap-x-[5.75rem] gap-y-9">
-                        <h1 className="font-inter font-bold sm:text-[4rem] text-5xl leading-[4.5rem] tracking-[-0.89px] max-lg:text-center sm:max-xl:text-balance">
+                        <h1 className="font-inter font-bold sm:text-[4rem] text-5xl sm:leading-[4.5rem] tracking-[-0.89px] max-lg:text-center sm:max-xl:text-balance">
                             Choose the right plan <span className="text-roooby-gray-300">for your business</span>
                         </h1>
                         <p className="font-inter font-normal text-lg leading-7 max-sm:text-center xl:ml-0 lg:ml-auto mt-auto lg:max-w-[22.5rem]">
